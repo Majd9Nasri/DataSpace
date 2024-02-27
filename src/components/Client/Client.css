@@ -1,0 +1,36 @@
+/* Client.css */
+
+.client-section {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background-color: #fff;
+  }
+  
+  .client-slider {
+    display: flex;
+    overflow: auto; /* Hier den Overflow auf "auto" setzen */
+    scroll-behavior: smooth; /* Für weiche Scroll-Animationen */
+    width: 100%; /* Den Slider auf die volle Breite des Containers einstellen */
+  }
+  
+  .client-slide {
+    flex: 0 0 auto;
+    margin-right: 10px; /* Passen Sie den rechten Margin-Abstand an Ihre Anforderungen an */
+    padding: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .client-slide:last-child {
+    margin-right: 0;
+  }
+  
+  .client-slide img {
+    width: auto; /* Ändern Sie die Breite auf "auto", um die Originalgröße beizubehalten */
+    height: 90px;
+  }
+  
+  .slick-slide {
+    margin-right: 10px; /* Passen Sie den Abstand an Ihre Anforderungen an */
+  }
+  

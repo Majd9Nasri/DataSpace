@@ -1,0 +1,224 @@
+.home-section{
+    min-height: 100vh;
+
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    padding:0 15px;
+    background-repeat: no-repeat;
+
+}
+.home-section:before{
+   content: '';
+   position: absolute;
+   box-sizing: border-box;
+   left:0;
+   top:0;
+   right:0;
+   bottom:0;
+   background-color: #000000;
+   opacity: 0.7;
+   
+   z-index: -1;
+   
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add this new class for the animation */
+.animated-heading {
+  font-size: 60px;
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 10px;
+  animation: slideInFromBottom 2.5s ease-in-out forwards;
+}
+  
+@keyframes fadeBackground {
+    0%, 80% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+ 
+.home-section .shape-01{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border:2px solid #E24C4F;
+  right: 5%;
+  top:20%;
+  animation:ani01 5s linear infinite;
+}
+.home-section .row{
+   min-height: 100vh;
+}
+.home-section .home-content{
+   /*background-color: red;*/
+   flex:0 0 100%;
+   max-width: 100%;
+   text-align: center;
+}
+.home-section .home-content h4{
+   font-size:20px;
+   color:#ffffff;
+   margin:0;
+}
+.home-section .home-content h1{
+   font-size: 60px;
+   margin:0;
+   color:#ffffff;
+   text-transform: uppercase;
+   font-weight: 900;
+   letter-spacing: 10px;
+}
+
+.home-section .scroll-down{
+   position: absolute;
+   left: 50%;
+   bottom: 30px;
+   height: 30px;
+   width: 30px;
+   margin-left: -15px;
+   animation:scrollDown 2s ease infinite;
+}
+@keyframes scrollDown{
+  0%,20%,50%,80%,100%{
+      transform: translateY(0);
+  }
+  40%{
+      transform: translateY(-30px);
+  }
+  60%{
+      transform: translateY(-15px);
+  }
+}
+.home-section .scroll-down img{
+  width: 25px;
+  display: block;
+  margin:2px auto;
+
+}
+
+.scroll-down {
+    /* Set the dimensions of the scroll down link */
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    cursor:pointer;
+  }
+  
+  .scroll-down-image {
+    /* Set the dimensions of the background image */
+    width: 40px;
+    height: 40px;
+    /* Set the background image URL */
+    background-image: url('../../img/arrow-down.svg');
+    /* Set the background image size */
+    background-size: cover;
+    /* Optionally, you can set a background color */
+     color: #ff1900;
+    /* Add other styles like border-radius, etc., to customize the appearance */
+    border-radius: 50%;
+    /* Center the background image within the <span> tag */
+    display: block;
+    margin: 0 auto;
+  }
+
+
+
+  
+/*responsive*/
+
+@media(min-width: 768px){
+	.header .nav{
+		display: block!important;
+	}
+}
+@media(max-width: 767px){
+	.header{
+		padding:7px 0;
+		position: fixed;
+	}
+	.header .nav-toggle{
+		display: flex;
+		margin-right: 15px;
+	}
+	.header .nav{
+		flex:0 0 100%;
+		max-width: 100%;
+		background-color: #ffffff;
+		padding:0;
+		display: none;
+	}
+	.header.fixed .nav{
+      border-top:1px solid #cccccc;
+	}
+	.header .nav ul li{
+		display: block;
+		margin-right: 25px;
+	}
+	.header.fixed .nav ul li a,
+	.header .nav ul li a{
+		color:#000000;
+		padding: 15px 0;
+	}
+	.home-section .home-content h1{
+		font-size: 40px;
+	}
+	.about-section .about-img{
+		margin-bottom: 30px;
+	}
+	.about-section .about-content,
+	.about-section .about-img {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .work-section .work-item,
+    .service-section .service-item{
+    	flex: 0 0 50%;
+    max-width: 50%;
+    }
+}
+
+@media(max-width: 575px){
+.home-section .home-content h1{
+		font-size: 25px;
+		letter-spacing: 5px;
+	}
+	.about-section .about-content .stats .stat-box {
+      flex: 0 0 50%;
+      max-width: 50%;
+   }
+   .contact-section .contact-info .info-item,
+   .contact-section .contact-form .form .input-group.left, 
+   .contact-section .contact-form .form .input-group.right,
+   .work-section .work-item,
+   .service-section .service-item{
+    	flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact-section .contact-form{
+    	padding: 0px 35px;
+    }
+    .contact-section .contact-form .form{
+    	padding: 55px 5px;
+    }
+}
+
+
+

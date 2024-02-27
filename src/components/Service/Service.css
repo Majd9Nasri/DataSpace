@@ -1,0 +1,175 @@
+/* ServiceSection.css */
+
+.service-section {
+    padding: 80px 0 0;
+    min-height: 100vh;
+   
+  }
+  
+  .service-section .service-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+  }
+  
+  .service-section .service-item-inner {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-section .service-item-inner img {
+    width: 100%;
+    display: block;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+  
+  .service-section .service-item-inner:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1);
+  }
+  
+  .service-section .service-item-inner .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+  }
+  
+  .service-section .service-item-inner:hover .overlay {
+    background-color: transparent;
+  }
+  
+  .service-section .service-item-inner .overlay h4 {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    transition: all 0.5s ease;
+    text-transform: capitalize;
+  }
+  
+  .service-section .service-item-inner .overlay:hover h4 {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  .service-section .service-item-inner video {
+    width: 100%; /* 100% der Breite des Elternelements (service-item-inner) */
+    display: block;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+
+
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the initial state for the title and service items */
+  .animated-title,
+  .animated-service-item {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  /* Apply the animation when the title or item is intersecting the viewport */
+  .animated-title.animate,
+  .animated-service-item.animate {
+    animation: slideInFromBottom 1.5s ease-in-out forwards;
+  }
+  
+/*responsive*/
+
+@media(min-width: 768px){
+	.header .nav{
+		display: block!important;
+	}
+}
+@media(max-width: 767px){
+	.header{
+		padding:7px 0;
+		position: fixed;
+	}
+	.header .nav-toggle{
+		display: flex;
+		margin-right: 15px;
+	}
+	.header .nav{
+		flex:0 0 100%;
+		max-width: 100%;
+		background-color: #ffffff;
+		padding:0;
+		display: none;
+	}
+	.header.fixed .nav{
+      border-top:1px solid #cccccc;
+	}
+	.header .nav ul li{
+		display: block;
+		margin-right: 25px;
+	}
+	.header.fixed .nav ul li a,
+	.header .nav ul li a{
+		color:#000000;
+		padding: 15px 0;
+	}
+	.home-section .home-content h1{
+		font-size: 40px;
+	}
+	.about-section .about-img{
+		margin-bottom: 30px;
+	}
+	.about-section .about-content,
+	.about-section .about-img {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .work-section .work-item,
+    .service-section .service-item{
+    	flex: 0 0 50%;
+    max-width: 50%;
+    }
+}
+
+@media(max-width: 575px){
+.home-section .home-content h1{
+		font-size: 25px;
+		letter-spacing: 5px;
+	}
+	.about-section .about-content .stats .stat-box {
+      flex: 0 0 50%;
+      max-width: 50%;
+   }
+   .contact-section .contact-info .info-item,
+   .contact-section .contact-form .form .input-group.left, 
+   .contact-section .contact-form .form .input-group.right,
+   .work-section .work-item,
+   .service-section .service-item{
+    	flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact-section .contact-form{
+    	padding: 0px 35px;
+    }
+    .contact-section .contact-form .form{
+    	padding: 55px 5px;
+    }
+}
+
+
+

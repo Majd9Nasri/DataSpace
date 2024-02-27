@@ -1,0 +1,105 @@
+
+  
+  .heading {
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .heading span {
+    font-style: italic;
+    font-size: 25px;
+  }
+  
+  .profiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 10px;
+  }
+  
+  .profile {
+    flex-basis: 260px;
+  }
+  
+  .profile-img {
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    filter: grayscale(0%);
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .profile:hover .profile-img {
+    filter: grayscale(0);
+  }
+  
+  .user-name {
+    text-align: center;
+    font-size: 27px;
+  }
+  
+  .profile h5 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: rgb(47, 47, 47);
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animated-title,
+  .animated-profile {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .animated-title.animate,
+  .animated-profile.animate {
+    animation: slideInFromBottom 1.5s ease-in-out forwards;
+  }
+  
+
+
+  @media only screen and (max-width: 1150px) {
+    .profiles {
+      flex-direction: column;
+    }
+  
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px 0 0 0;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .heading {
+      font-size: 40px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+  
+    .heading span {
+      font-size: 15px;
+    }
+  
+    .profiles {
+      margin: 20px 0;
+    }
+  
+    .profile {
+      margin: 30px 0 0 0;
+    }
+  }

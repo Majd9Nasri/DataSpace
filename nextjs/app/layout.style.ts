@@ -5,12 +5,27 @@ import styled from "styled-components";
 export const HomePageHeader = styled.header`
   position: fixed;
   width: 100vw;
+  padding: 10px 0;
 `;
 
 export const HomePageHeaderNavigation = styled.nav`
   display: flex;
   max-width: 73rem;
   margin: 0 auto;
+`;
+
+export const HomePageHeaderLogoLink = styled.a`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+`;
+
+export const HomePageLogoSpan = styled.span`
+  margin-left: 0.625rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
 `;
 
 export const HomePageHeaderUnorderedList = styled.ul`

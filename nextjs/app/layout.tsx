@@ -1,9 +1,12 @@
+import Image from "next/image";
 import StyledComponentsRegistry from "../lib/registry";
 import {
   HomePageHeader,
   HomePageHeaderLink,
+  HomePageHeaderLogoLink,
   HomePageHeaderNavigation,
   HomePageHeaderUnorderedList,
+  HomePageLogoSpan,
 } from "./layout.style";
 
 export default function RootLayout({
@@ -31,6 +34,10 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <HomePageHeader>
             <HomePageHeaderNavigation>
+              <HomePageHeaderLogoLink href="#home">
+                <Image src="/logo.png" width="30" height="55" alt="Logo" />
+                <HomePageLogoSpan>Data Space</HomePageLogoSpan>
+              </HomePageHeaderLogoLink>
               <HomePageHeaderUnorderedList>
                 <li>
                   <HomePageHeaderLink href="#home">Home</HomePageHeaderLink>

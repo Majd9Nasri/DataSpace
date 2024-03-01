@@ -17,12 +17,12 @@
   }
   
   .profile {
-    flex-basis: 260px;
+    flex-basis: 280px;
   }
   
   .profile-img {
-    height: 260px;
-    width: 260px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
     filter: grayscale(0%);
     cursor: pointer;
@@ -57,6 +57,9 @@
     }
   }
   
+
+
+
   .animated-title,
   .animated-profile {
     transform: translateY(100%);

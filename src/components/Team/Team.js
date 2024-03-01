@@ -31,6 +31,7 @@ function Team() {
         <div className="row">
           <div className="section-title">
             <h1 className="animated-titl">Team</h1>
+           
           </div>
         </div>
         <div className="profiles">

@@ -2,6 +2,11 @@
 
 # dependencies
 /node_modules
+/nextjs/node_modules
+/nextjs/.next
+/.next
+/nextjs/out
+/out
 /.pnp
 .pnp.js
 

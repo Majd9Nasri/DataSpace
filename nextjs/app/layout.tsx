@@ -1,4 +1,10 @@
 import StyledComponentsRegistry from "../lib/registry";
+import {
+  HomePageHeader,
+  HomePageHeaderLink,
+  HomePageHeaderNavigation,
+  HomePageHeaderUnorderedList,
+} from "./layout.style";
 
 export default function RootLayout({
   children,
@@ -22,7 +28,30 @@ export default function RootLayout({
         ></link>
       </head>
       <body style={{ margin: 0, fontFamily: "Raleway, sans-serif" }}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <HomePageHeader>
+            <HomePageHeaderNavigation>
+              <HomePageHeaderUnorderedList>
+                <li>
+                  <HomePageHeaderLink href="#home">Home</HomePageHeaderLink>
+                </li>
+                <li>
+                  <HomePageHeaderLink href="#about">About</HomePageHeaderLink>
+                </li>
+                <li>
+                  <HomePageHeaderLink href="#home">Services</HomePageHeaderLink>
+                </li>
+                <li>
+                  <HomePageHeaderLink href="#home">Works</HomePageHeaderLink>
+                </li>
+                <li>
+                  <HomePageHeaderLink href="#home">Contact</HomePageHeaderLink>
+                </li>
+              </HomePageHeaderUnorderedList>
+            </HomePageHeaderNavigation>
+          </HomePageHeader>
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

@@ -10,7 +10,7 @@ export const HomePageWrapper = styled.section`
   align-items: center;
 `;
 
-export const HomePageHeader = styled.h1`
+export const HomePageHeading = styled.h1`
   color: #fff;
   font-size: 3.75rem;
   text-transform: uppercase;

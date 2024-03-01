@@ -1,9 +1,13 @@
-import { HomePageHeader, HomePageWrapper } from "./page.style";
+import { HomePageHeading, HomePageWrapper } from "./page.style";
 
 export default function Page() {
   return (
-    <HomePageWrapper>
-      <HomePageHeader>Data Space</HomePageHeader>
-    </HomePageWrapper>
+    <>
+      <HomePageWrapper>
+        <HomePageHeading>Data Space</HomePageHeading>
+      </HomePageWrapper>
+      <hr />
+      dasdasd
+    </>
   );
 }

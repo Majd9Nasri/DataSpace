@@ -39,13 +39,17 @@ export default function RootLayout({
                   <HomePageHeaderLink href="#about">About</HomePageHeaderLink>
                 </li>
                 <li>
-                  <HomePageHeaderLink href="#home">Services</HomePageHeaderLink>
+                  <HomePageHeaderLink href="#services">
+                    Services
+                  </HomePageHeaderLink>
                 </li>
                 <li>
-                  <HomePageHeaderLink href="#home">Works</HomePageHeaderLink>
+                  <HomePageHeaderLink href="#team">Team</HomePageHeaderLink>
                 </li>
                 <li>
-                  <HomePageHeaderLink href="#home">Contact</HomePageHeaderLink>
+                  <HomePageHeaderLink href="#contact">
+                    Contact
+                  </HomePageHeaderLink>
                 </li>
               </HomePageHeaderUnorderedList>
             </HomePageHeaderNavigation>

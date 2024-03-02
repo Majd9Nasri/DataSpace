@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { metrics } from "../ui/metrics";
+import { metrics, metricsRem } from "../ui/metrics";
 
 export const LayoutHeader = styled.header`
   position: fixed;
@@ -11,7 +11,7 @@ export const LayoutHeader = styled.header`
 
 export const LayoutHeaderNavigation = styled.nav`
   display: flex;
-  max-width: ${metrics.maxPageContentWidth};
+  max-width: ${metricsRem.maxPageContentWidth};
   margin: 0 auto;
 `;
 

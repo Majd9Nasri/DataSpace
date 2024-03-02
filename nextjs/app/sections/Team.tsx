@@ -1,12 +1,16 @@
-import { ContentSection, SectionTitle } from "../../ui/general.style";
-import { TeamImage, TeamImageWrapper, TeamImagesWrapper } from "./Team.style";
+import {
+  ContentSection,
+  ResponsiveGrid,
+  SectionTitle,
+} from "../../ui/general.style";
+import { TeamImage, TeamImageWrapper } from "./Team.style";
 
 export function Team() {
   return (
     <ContentSection>
       <SectionTitle>Team</SectionTitle>
-      <p>We make your project happen.</p>
-      <TeamImagesWrapper>
+      <h1>We make your project happen.</h1>
+      <ResponsiveGrid columns={3}>
         <TeamImageWrapper>
           <TeamImage src="/Ahmed.jpg" alt="Ahmed" />
           <h3>Ahmed Al-Ammari</h3>
@@ -25,7 +29,7 @@ export function Team() {
             Engineering
           </p>
         </TeamImageWrapper>
-      </TeamImagesWrapper>
+      </ResponsiveGrid>
     </ContentSection>
   );
 }

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import styled from "styled-components";
 
 export const StartPageWrapper = styled.section`
@@ -11,7 +10,7 @@ export const StartPageWrapper = styled.section`
   box-shadow: 0 0 0.625rem #000;
 `;
 
-export const StartPageBackgroundImage = styled(Image)`
+export const StartPageBackgroundImage = styled.img`
   position: absolute;
   top: 0;
   right: 0;

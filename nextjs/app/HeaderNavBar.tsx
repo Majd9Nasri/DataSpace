@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   HeaderNavBarHeader,
   HeaderNavBarLink,
@@ -13,17 +13,21 @@ import {
 
 export function HeaderNavBar() {
   const [verticalScroll, setVerticalScroll] = useState(0);
-  const verticalScrollPercentage =
-    (window.scrollY /
-      (document.documentElement.scrollHeight -
-        document.documentElement.clientHeight)) *
-    100;
+  const [verticalScrollPercentage, setVerticalScrollPercentage] = useState(0);
+  const documentClientHeightRef = useRef(0);
 
   function updateVerticalScrollPercentage() {
     setVerticalScroll(window.scrollY);
+    setVerticalScrollPercentage(
+      (window.scrollY /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight)) *
+        100
+    );
   }
 
   useEffect(() => {
+    documentClientHeightRef.current = document.documentElement.clientHeight;
     window.addEventListener("scroll", updateVerticalScrollPercentage);
     return () => {
       window.removeEventListener("scroll", updateVerticalScrollPercentage);
@@ -31,9 +35,7 @@ export function HeaderNavBar() {
   }, []);
   return (
     <HeaderNavBarHeader
-      enableBackground={
-        verticalScroll > document.documentElement.clientHeight / 2
-      }
+      enableBackground={verticalScroll > documentClientHeightRef.current / 2}
     >
       <HeaderNavBarScrollerPercentage width={verticalScrollPercentage} />
       <HeaderNavBarNavigation>

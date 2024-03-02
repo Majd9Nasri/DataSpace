@@ -8,6 +8,7 @@ export const StartPageWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 0.625rem #000;
 `;
 
 export const StartPageBackgroundImage = styled(Image)`
@@ -26,11 +27,23 @@ export const StartPageBackgroundImage = styled(Image)`
 `;
 
 export const StartPageHeading = styled.h1`
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   color: #fff;
   font-size: 3.75rem;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.625rem;
+  animation: slideInFromBottom 2.5s;
 `;
 
 export const StartPageArrowLink = styled.a`

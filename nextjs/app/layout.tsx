@@ -8,6 +8,7 @@ import {
   LayoutHeaderUnorderedList,
   LayoutLogoSpan,
 } from "./layout.style";
+import { GlobalStyles } from "../ui/global.style";
 
 export default function RootLayout({
   children,
@@ -32,6 +33,7 @@ export default function RootLayout({
       </head>
       <body style={{ margin: 0, fontFamily: "Raleway, sans-serif" }}>
         <StyledComponentsRegistry>
+          <GlobalStyles />
           <LayoutHeader>
             <LayoutHeaderNavigation>
               <LayoutHeaderLogoLink href="#home">

@@ -1,5 +1,9 @@
-import { ContentSection } from "../../ui/general.style";
+import { ContentSection, SectionTitle } from "../../ui/general.style";
 
 export function Services() {
-  return <ContentSection>Services</ContentSection>;
+  return (
+    <ContentSection>
+      <SectionTitle>Services</SectionTitle>
+    </ContentSection>
+  );
 }

@@ -1,9 +1,9 @@
-import { ContentSection } from "../../ui/general.style";
+import { ContentSection, SectionTitle } from "../../ui/general.style";
 
 export function About() {
   return (
     <ContentSection>
-      About
+      <SectionTitle>About</SectionTitle>
       <h1>
         We are an interdisciplinary Team of Data Scientists with backgrounds in
         Economics, Software Engineering and Mechatronics

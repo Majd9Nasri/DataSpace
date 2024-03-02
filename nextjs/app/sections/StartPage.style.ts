@@ -36,10 +36,12 @@ export const StartPageHeading = styled.h1`
 
 export const StartPageArrowLink = styled.a`
   position: absolute;
-  bottom: 1rem;
+  bottom: 0rem;
+  padding: 1rem;
 `;
 
 export const StartPageArrow = styled.img`
+  pointer-events: none;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;

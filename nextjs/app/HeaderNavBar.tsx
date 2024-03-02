@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { handleNavLinkClick } from "../lib/clientUtility";
 import {
   HeaderNavBarHeader,
   HeaderNavBarLink,
@@ -25,22 +26,6 @@ export function HeaderNavBar() {
         100
     );
   }
-
-  const handleNavLinkClick = (event) => {
-    event.preventDefault();
-    const targetId = event.target.getAttribute("href");
-    const targetElement: HTMLElement = document.querySelector(targetId);
-
-    let targetScrollPosition = targetElement.getBoundingClientRect().top;
-    if (targetScrollPosition < 110 && targetScrollPosition > 0) {
-      return;
-    }
-
-    window.scrollTo({
-      top: targetScrollPosition + window.scrollY - 100,
-      behavior: "smooth",
-    });
-  };
 
   useEffect(() => {
     documentClientHeightRef.current = document.documentElement.clientHeight;

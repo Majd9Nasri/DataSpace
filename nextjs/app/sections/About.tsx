@@ -1,6 +1,8 @@
+import { ContentSection } from "../../ui/general.style";
+
 export function About() {
   return (
-    <section>
+    <ContentSection>
       About
       <h1>
         We are an interdisciplinary Team of Data Scientists with backgrounds in
@@ -11,6 +13,6 @@ export function About() {
         and technology, and are committed to continue to innovate and create
         value based on our vast domain knowledge and expertise for our clients.
       </p>
-    </section>
+    </ContentSection>
   );
 }

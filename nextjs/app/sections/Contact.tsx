@@ -1,3 +1,5 @@
+import { ContentSection } from "../../ui/general.style";
+
 export function Contact() {
-  return <section>Contact</section>;
+  return <ContentSection>Contact</ContentSection>;
 }

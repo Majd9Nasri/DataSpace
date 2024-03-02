@@ -1,3 +1,5 @@
+import { ContentSection } from "../../ui/general.style";
+
 export function Team() {
-  return <section>Team</section>;
+  return <ContentSection>Team</ContentSection>;
 }

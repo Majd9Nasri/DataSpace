@@ -1,12 +1,12 @@
 import Image from "next/image";
 import StyledComponentsRegistry from "../lib/registry";
 import {
-  HomePageHeader,
-  HomePageHeaderLink,
-  HomePageHeaderLogoLink,
-  HomePageHeaderNavigation,
-  HomePageHeaderUnorderedList,
-  HomePageLogoSpan,
+  LayoutHeader,
+  LayoutHeaderLink,
+  LayoutHeaderLogoLink,
+  LayoutHeaderNavigation,
+  LayoutHeaderUnorderedList,
+  LayoutLogoSpan,
 } from "./layout.style";
 
 export default function RootLayout({
@@ -32,35 +32,31 @@ export default function RootLayout({
       </head>
       <body style={{ margin: 0, fontFamily: "Raleway, sans-serif" }}>
         <StyledComponentsRegistry>
-          <HomePageHeader>
-            <HomePageHeaderNavigation>
-              <HomePageHeaderLogoLink href="#home">
+          <LayoutHeader>
+            <LayoutHeaderNavigation>
+              <LayoutHeaderLogoLink href="#home">
                 <Image src="/logo.png" width="30" height="55" alt="Logo" />
-                <HomePageLogoSpan>Data Space</HomePageLogoSpan>
-              </HomePageHeaderLogoLink>
-              <HomePageHeaderUnorderedList>
+                <LayoutLogoSpan>Data Space</LayoutLogoSpan>
+              </LayoutHeaderLogoLink>
+              <LayoutHeaderUnorderedList>
                 <li>
-                  <HomePageHeaderLink href="#home">Home</HomePageHeaderLink>
+                  <LayoutHeaderLink href="#home">Home</LayoutHeaderLink>
                 </li>
                 <li>
-                  <HomePageHeaderLink href="#about">About</HomePageHeaderLink>
+                  <LayoutHeaderLink href="#about">About</LayoutHeaderLink>
                 </li>
                 <li>
-                  <HomePageHeaderLink href="#services">
-                    Services
-                  </HomePageHeaderLink>
+                  <LayoutHeaderLink href="#services">Services</LayoutHeaderLink>
                 </li>
                 <li>
-                  <HomePageHeaderLink href="#team">Team</HomePageHeaderLink>
+                  <LayoutHeaderLink href="#team">Team</LayoutHeaderLink>
                 </li>
                 <li>
-                  <HomePageHeaderLink href="#contact">
-                    Contact
-                  </HomePageHeaderLink>
+                  <LayoutHeaderLink href="#contact">Contact</LayoutHeaderLink>
                 </li>
-              </HomePageHeaderUnorderedList>
-            </HomePageHeaderNavigation>
-          </HomePageHeader>
+              </LayoutHeaderUnorderedList>
+            </LayoutHeaderNavigation>
+          </LayoutHeader>
           {children}
         </StyledComponentsRegistry>
       </body>

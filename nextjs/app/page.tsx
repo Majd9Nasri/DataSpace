@@ -1,13 +1,13 @@
 import { About } from "./sections/About";
 import { Contact } from "./sections/Contact";
-import { Homepage } from "./sections/Homepage";
+import { StartPage } from "./sections/StartPage";
 import { Services } from "./sections/Services";
 import { Team } from "./sections/Team";
 
 export default function Page() {
   return (
     <>
-      <Homepage />
+      <StartPage />
       <About />
       <Services />
       <Team />

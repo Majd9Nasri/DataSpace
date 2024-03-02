@@ -3,25 +3,25 @@
 import styled from "styled-components";
 import { metrics } from "../ui/metrics";
 
-export const HomePageHeader = styled.header`
+export const LayoutHeader = styled.header`
   position: fixed;
   width: 100vw;
   padding: 10px 0;
 `;
 
-export const HomePageHeaderNavigation = styled.nav`
+export const LayoutHeaderNavigation = styled.nav`
   display: flex;
-  max-width: 73rem;
+  max-width: ${metrics.maxPageContentWidth};
   margin: 0 auto;
 `;
 
-export const HomePageHeaderLogoLink = styled.a`
+export const LayoutHeaderLogoLink = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
 `;
 
-export const HomePageLogoSpan = styled.span`
+export const LayoutLogoSpan = styled.span`
   margin-left: 0.625rem;
   color: #fff;
   text-transform: uppercase;
@@ -29,13 +29,13 @@ export const HomePageLogoSpan = styled.span`
   letter-spacing: 0.125rem;
 `;
 
-export const HomePageHeaderUnorderedList = styled.ul`
+export const LayoutHeaderUnorderedList = styled.ul`
   margin-left: auto;
   list-style-type: none;
   display: flex;
 `;
 
-export const HomePageHeaderLink = styled.a`
+export const LayoutHeaderLink = styled.a`
   color: #fff;
   text-decoration: none;
   font-weight: ${metrics.headerFontWeight};

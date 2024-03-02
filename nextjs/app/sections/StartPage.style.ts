@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 
-export const HomepageWrapper = styled.section`
+export const StartPageWrapper = styled.section`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -10,7 +10,7 @@ export const HomepageWrapper = styled.section`
   align-items: center;
 `;
 
-export const HomepageBackgroundImage = styled(Image)`
+export const StartPageBackgroundImage = styled(Image)`
   position: absolute;
   top: 0;
   right: 0;
@@ -25,7 +25,7 @@ export const HomepageBackgroundImage = styled(Image)`
   z-index: -1;
 `;
 
-export const HomepageHeading = styled.h1`
+export const StartPageHeading = styled.h1`
   color: #fff;
   font-size: 3.75rem;
   text-transform: uppercase;
@@ -33,12 +33,12 @@ export const HomepageHeading = styled.h1`
   letter-spacing: 0.625rem;
 `;
 
-export const HomepageArrowLink = styled.a`
+export const StartPageArrowLink = styled.a`
   position: absolute;
   bottom: 1rem;
 `;
 
-export const HomepageArrow = styled.img`
+export const StartPageArrow = styled.img`
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;

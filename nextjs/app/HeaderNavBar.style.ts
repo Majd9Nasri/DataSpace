@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { metrics, metricsRem } from "../ui/metrics";
+import { ZIndex } from "../ui/zIndex";
 
 export const HeaderNavBarScrollerPercentage = styled.div<{ width: number }>`
   width: ${(p) => p.width}%;
@@ -10,7 +11,7 @@ export const HeaderNavBarScrollerPercentage = styled.div<{ width: number }>`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: ${ZIndex.HeaderNavBar};
   transition: width 0.3s;
 `;
 
@@ -62,6 +63,7 @@ export const HeaderNavBarHeader = styled.header<{ enableBackground: boolean }>`
   box-shadow: 0 0 8px
     rgba(255, 255, 255, ${(p) => (p.enableBackground ? 1 : 0)});
   transition: 0.5s;
+  z-index: ${ZIndex.HeaderNavBar};
 
   ${HeaderNavBarLogoSpan} {
     color: ${(p) => (p.enableBackground ? "#000" : "#fff")};

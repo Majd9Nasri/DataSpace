@@ -1,5 +1,6 @@
 "use client";
 import styled from "styled-components";
+import { ZIndex } from "../../ui/zIndex";
 
 export const StartPageWrapper = styled.section`
   width: 100vw;
@@ -22,7 +23,7 @@ export const StartPageBackgroundImage = styled.img`
   background-repeat: no-repeat;
 
   filter: brightness(30%);
-  z-index: -1;
+  z-index: ${ZIndex.StartPageBackgroundImage};
 `;
 
 export const StartPageHeading = styled.h1`

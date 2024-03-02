@@ -1,6 +1,5 @@
 import StyledComponentsRegistry from "../lib/registry";
 import { GlobalStyles } from "../ui/global.style";
-import { HeaderNavBar } from "./HeaderNavBar";
 
 export default function RootLayout({
   children,
@@ -26,7 +25,6 @@ export default function RootLayout({
       <body style={{ margin: 0, fontFamily: "Raleway, sans-serif" }}>
         <StyledComponentsRegistry>
           <GlobalStyles />
-          <HeaderNavBar />
           {children}
         </StyledComponentsRegistry>
       </body>

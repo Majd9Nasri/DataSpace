@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+import { metrics } from "../ui/metrics";
 
 export const HomePageHeader = styled.header`
   position: fixed;
@@ -24,7 +25,7 @@ export const HomePageLogoSpan = styled.span`
   margin-left: 0.625rem;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: ${metrics.headerFontWeight};
   letter-spacing: 0.125rem;
 `;
 
@@ -37,6 +38,7 @@ export const HomePageHeaderUnorderedList = styled.ul`
 export const HomePageHeaderLink = styled.a`
   color: #fff;
   text-decoration: none;
+  font-weight: ${metrics.headerFontWeight};
 
   padding: 1rem;
   transition: 0.5s;

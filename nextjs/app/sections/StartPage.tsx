@@ -8,7 +8,7 @@ import {
 
 export function StartPage() {
   return (
-    <StartPageWrapper>
+    <StartPageWrapper id="start">
       <StartPageBackgroundImage src="/kam.webp" alt="Start page background" />
       <StartPageHeading>Data Space</StartPageHeading>
       <StartPageArrowLink href="#about">

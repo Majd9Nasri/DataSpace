@@ -2,7 +2,7 @@ import { ContentSection, SectionTitle } from "../../ui/general.style";
 
 export function About() {
   return (
-    <ContentSection>
+    <ContentSection id="about">
       <SectionTitle>About</SectionTitle>
       <h1>
         We are an interdisciplinary Team of Data Scientists with backgrounds in

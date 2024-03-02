@@ -26,9 +26,26 @@ export function HeaderNavBar() {
     );
   }
 
+  const handleNavLinkClick = (event) => {
+    event.preventDefault();
+    const targetId = event.target.getAttribute("href");
+    const targetElement: HTMLElement = document.querySelector(targetId);
+
+    let targetScrollPosition = targetElement.getBoundingClientRect().top;
+    if (targetScrollPosition < 110 && targetScrollPosition > 0) {
+      return;
+    }
+
+    window.scrollTo({
+      top: targetScrollPosition + window.scrollY - 100,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     documentClientHeightRef.current = document.documentElement.clientHeight;
     window.addEventListener("scroll", updateVerticalScrollPercentage);
+    updateVerticalScrollPercentage();
     return () => {
       window.removeEventListener("scroll", updateVerticalScrollPercentage);
     };
@@ -39,25 +56,35 @@ export function HeaderNavBar() {
     >
       <HeaderNavBarScrollerPercentage width={verticalScrollPercentage} />
       <HeaderNavBarNavigation>
-        <HeaderNavBarLogoLink href="#home">
+        <HeaderNavBarLogoLink href="#start">
           <Image src="/logo.png" width="30" height="55" alt="Logo" />
           <HeaderNavBarLogoSpan>Data Space</HeaderNavBarLogoSpan>
         </HeaderNavBarLogoLink>
         <HeaderNavBarUnorderedList>
           <li>
-            <HeaderNavBarLink href="#home">Home</HeaderNavBarLink>
+            <HeaderNavBarLink href="#start" onClick={handleNavLinkClick}>
+              Home
+            </HeaderNavBarLink>
           </li>
           <li>
-            <HeaderNavBarLink href="#about">About</HeaderNavBarLink>
+            <HeaderNavBarLink href="#about" onClick={handleNavLinkClick}>
+              About
+            </HeaderNavBarLink>
           </li>
           <li>
-            <HeaderNavBarLink href="#services">Services</HeaderNavBarLink>
+            <HeaderNavBarLink href="#services" onClick={handleNavLinkClick}>
+              Services
+            </HeaderNavBarLink>
           </li>
           <li>
-            <HeaderNavBarLink href="#team">Team</HeaderNavBarLink>
+            <HeaderNavBarLink href="#team" onClick={handleNavLinkClick}>
+              Team
+            </HeaderNavBarLink>
           </li>
           <li>
-            <HeaderNavBarLink href="#contact">Contact</HeaderNavBarLink>
+            <HeaderNavBarLink href="#contact" onClick={handleNavLinkClick}>
+              Contact
+            </HeaderNavBarLink>
           </li>
         </HeaderNavBarUnorderedList>
       </HeaderNavBarNavigation>

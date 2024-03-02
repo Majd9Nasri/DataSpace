@@ -2,6 +2,10 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+  html, body {
+    scroll-behavior: smooth;
+  }
+  
   @keyframes slideInFromBottom {
     0% {
       transform: translateY(100%);

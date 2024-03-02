@@ -7,7 +7,7 @@ import { ServiceImage, ServiceWrapper } from "./Services.style";
 
 export function Services() {
   return (
-    <ContentSection>
+    <ContentSection id="services">
       <SectionTitle>Services</SectionTitle>
       <h1>Dedicated and value rich Data Services</h1>
       <ResponsiveGrid columns={3}>

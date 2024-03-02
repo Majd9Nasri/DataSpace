@@ -9,7 +9,7 @@ import {
 
 export function Contact() {
   return (
-    <ContentSection>
+    <ContentSection id="contact">
       <ContactContentSplitter>
         <div>
           <SectionTitle>Contact</SectionTitle>

@@ -7,7 +7,7 @@ import { TeamImage, TeamImageWrapper } from "./Team.style";
 
 export function Team() {
   return (
-    <ContentSection>
+    <ContentSection id="team">
       <SectionTitle>Team</SectionTitle>
       <h1>We make your project happen.</h1>
       <ResponsiveGrid columns={3}>

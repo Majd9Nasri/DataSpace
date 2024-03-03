@@ -50,7 +50,7 @@ export const HeaderNavBarLink = styled.a`
   padding: 1rem;
   transition: 0.5s;
   &:hover {
-    color: #e24c4f;
+    color: #e24c4f !important;
     background-color: #fff;
   }
 `;

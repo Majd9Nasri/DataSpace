@@ -57,7 +57,7 @@ export const HeaderNavBarLink = styled.a`
 
 export const HeaderNavBarHeader = styled.header<{ enableBackground: boolean }>`
   position: fixed;
-  width: 100vw;
+  width: 100%;
   padding: 10px 0;
   background-color: ${(p) => (p.enableBackground ? "#fff" : "transparent")};
   box-shadow: 0 0 8px

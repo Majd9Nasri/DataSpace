@@ -1,5 +1,6 @@
 import StyledComponentsRegistry from "../lib/registry";
-import { GlobalStyles } from "../ui/global.style";
+import { raleway } from "../ui/font";
+import "../ui/global.style.css";
 
 export default function RootLayout({
   children,
@@ -7,7 +8,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={raleway.className}
+      style={{ margin: 0, padding: 0 }}
+    >
       <head>
         <meta charSet="utf-8" />
         <title>DNA Dataspace Solutions</title>
@@ -22,11 +27,8 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body style={{ margin: 0, fontFamily: "Raleway, sans-serif" }}>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-          {children}
-        </StyledComponentsRegistry>
+      <body style={{ margin: 0, padding: 0 }}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );

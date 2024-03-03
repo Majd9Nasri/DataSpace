@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ZIndex } from "../../ui/zIndex";
 
 export const StartPageWrapper = styled.section`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -13,14 +13,17 @@ export const StartPageWrapper = styled.section`
 
 export const StartPageBackgroundImage = styled.img`
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 100%;
+  min-height: 100%;
   max-height: 100%;
-  min-width: 100vw;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
 
-  background-image: url("kam.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  object-fit: cover;
 
   filter: brightness(30%);
   z-index: ${ZIndex.StartPageBackgroundImage};

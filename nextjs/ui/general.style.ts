@@ -5,6 +5,7 @@ import { metrics, metricsRem } from "./metrics";
 
 export const ContentSection = styled.section`
   max-width: ${metricsRem.maxPageContentWidth};
+  padding: 0 0.625rem;
   margin: 0 auto;
 `;
 

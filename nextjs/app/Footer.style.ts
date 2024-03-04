@@ -6,7 +6,7 @@ import { metricsRem } from "../ui/metrics";
 export const FooterFooter = styled.footer`
   max-width: ${metricsRem.maxPageContentWidth};
   margin: 0 auto;
-  padding: 0 0.625rem;
+  padding: 0 ${metricsRem.pagePadding};
   font-size: 15px;
 
   color: rgba(0, 0, 0, 0.7);

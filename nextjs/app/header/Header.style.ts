@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { metrics, metricsRem } from "../../ui/metrics";
 import { ZIndex } from "../../ui/zIndex";
 import { NavbarDesktopLink } from "./NavbarDesktop.style";
-import { NavbarMobileBurgerMenu } from "./NavbarMobile.style";
+import { NavbarMobileBurgerMenu, NavbarMobileLink } from "./NavbarMobile.style";
 
 export const HeaderScrollerPercentage = styled.div<{ width: number }>`
   width: ${(p) => p.width}%;
@@ -54,6 +54,11 @@ export const HeaderHeader = styled.header<{ enableBackground: boolean }>`
 
   ${NavbarDesktopLink} {
     color: ${(p) => (p.enableBackground ? "#000" : undefined)};
+  }
+
+  ${NavbarMobileLink} {
+    background-color: ${(p) => (p.enableBackground ? "#fff" : undefined)};
+    box-shadow: ${(p) => (p.enableBackground ? "0 0 1px 1px #000" : undefined)};
   }
 
   ${NavbarMobileBurgerMenu} {

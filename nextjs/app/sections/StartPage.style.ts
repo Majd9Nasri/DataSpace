@@ -3,30 +3,34 @@ import styled from "styled-components";
 import { ZIndex } from "../../ui/zIndex";
 
 export const StartPageWrapper = styled.section`
+  position: relative;
+
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 0.625rem #000;
-`;
 
-export const StartPageBackgroundImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
+  background-image: url("/kam.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  object-fit: cover;
+  z-index: ${ZIndex.Default};
 
-  filter: brightness(30%);
-  z-index: ${ZIndex.StartPageBackgroundImage};
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.7;
+
+    z-index: ${ZIndex.StartPageBackgroundImage};
+  }
 `;
 
 export const StartPageHeading = styled.h1`

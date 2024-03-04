@@ -1,8 +1,9 @@
 import { ContentSection, SectionTitle } from "../../ui/general.style";
+import { NavbarRoutes } from "../header/navbarRoutes";
 
 export function About() {
   return (
-    <ContentSection id="about">
+    <ContentSection id={NavbarRoutes.About}>
       <SectionTitle>About</SectionTitle>
       <h1>
         We are an interdisciplinary Team of Data Scientists with backgrounds in

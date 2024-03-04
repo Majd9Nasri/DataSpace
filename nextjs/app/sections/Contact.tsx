@@ -1,5 +1,6 @@
 import { ContentSection, SectionTitle } from "../../ui/general.style";
 import { GoUp } from "../components/GoUp";
+import { NavbarRoutes } from "../header/navbarRoutes";
 import {
   ContactContentSplitter,
   ContactEmail,
@@ -9,7 +10,7 @@ import {
 
 export function Contact() {
   return (
-    <ContentSection id="contact">
+    <ContentSection id={NavbarRoutes.Contact}>
       <ContactContentSplitter>
         <div>
           <SectionTitle>Contact</SectionTitle>

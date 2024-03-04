@@ -3,11 +3,12 @@ import {
   ResponsiveGrid,
   SectionTitle,
 } from "../../ui/general.style";
+import { NavbarRoutes } from "../header/navbarRoutes";
 import { TeamImage, TeamImageWrapper } from "./Team.style";
 
 export function Team() {
   return (
-    <ContentSection id="team">
+    <ContentSection id={NavbarRoutes.Team}>
       <SectionTitle>Team</SectionTitle>
       <h1>We make your project happen.</h1>
       <ResponsiveGrid columns={3}>

@@ -10,6 +10,7 @@ import {
 } from "./Header.style";
 import { NavbarDesktop } from "./NavbarDesktop";
 import { NavbarMobile } from "./NavbarMobile";
+import { NavbarRouteLinks } from "./navbarRoutes";
 
 const enum NavbarState {
   Desktop,
@@ -58,7 +59,7 @@ export function Header() {
     >
       <HeaderScrollerPercentage width={verticalScrollPercentage} />
       <HeaderNavigation>
-        <HeaderLogoLink href="#start">
+        <HeaderLogoLink href={NavbarRouteLinks.Home}>
           <Image src="/logo.png" width="30" height="55" alt="Logo" />
           <HeaderLogoSpan>Data Space</HeaderLogoSpan>
         </HeaderLogoLink>

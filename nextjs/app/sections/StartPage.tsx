@@ -1,4 +1,5 @@
 import { handleNavLinkClick } from "../../lib/clientUtility";
+import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import {
   StartPageArrow,
   StartPageArrowLink,
@@ -8,9 +9,12 @@ import {
 
 export function StartPage() {
   return (
-    <StartPageWrapper id="start">
+    <StartPageWrapper id={NavbarRoutes.Home}>
       <StartPageHeading>Data Space</StartPageHeading>
-      <StartPageArrowLink href="#about" onClick={handleNavLinkClick}>
+      <StartPageArrowLink
+        href={NavbarRouteLinks.About}
+        onClick={handleNavLinkClick}
+      >
         <StartPageArrow src="/arrow-down.svg" />
       </StartPageArrowLink>
     </StartPageWrapper>

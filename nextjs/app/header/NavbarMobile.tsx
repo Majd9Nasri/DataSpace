@@ -8,6 +8,7 @@ import {
   NavbarMobileUnorderedList,
   NavbarMobileWrapper,
 } from "./NavbarMobile.style";
+import { NavbarRouteLinks } from "./navbarRoutes";
 
 export function NavbarMobile() {
   const [open, setOpen] = useState(false);
@@ -27,31 +28,40 @@ export function NavbarMobile() {
       {!open ? null : (
         <NavbarMobileUnorderedList>
           <li>
-            <NavbarMobileLink href="#start" onClick={handleNavLinkMobileClick}>
+            <NavbarMobileLink
+              href={NavbarRouteLinks.Home}
+              onClick={handleNavLinkMobileClick}
+            >
               Home
             </NavbarMobileLink>
           </li>
           <li>
-            <NavbarMobileLink href="#about" onClick={handleNavLinkMobileClick}>
+            <NavbarMobileLink
+              href={NavbarRouteLinks.About}
+              onClick={handleNavLinkMobileClick}
+            >
               About
             </NavbarMobileLink>
           </li>
           <li>
             <NavbarMobileLink
-              href="#services"
+              href={NavbarRouteLinks.Services}
               onClick={handleNavLinkMobileClick}
             >
               Services
             </NavbarMobileLink>
           </li>
           <li>
-            <NavbarMobileLink href="#team" onClick={handleNavLinkMobileClick}>
+            <NavbarMobileLink
+              href={NavbarRouteLinks.Team}
+              onClick={handleNavLinkMobileClick}
+            >
               Team
             </NavbarMobileLink>
           </li>
           <li>
             <NavbarMobileLink
-              href="#contact"
+              href={NavbarRouteLinks.Contact}
               onClick={handleNavLinkMobileClick}
             >
               Contact

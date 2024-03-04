@@ -3,32 +3,48 @@ import {
   NavbarDesktopLink,
   NavbarDesktopUnorderedList,
 } from "./NavbarDesktop.style";
+import { NavbarRouteLinks } from "./navbarRoutes";
 
 export function NavbarDesktop() {
   return (
     <NavbarDesktopUnorderedList>
       <li>
-        <NavbarDesktopLink href="#start" onClick={handleNavLinkClick}>
+        <NavbarDesktopLink
+          href={NavbarRouteLinks.Home}
+          onClick={handleNavLinkClick}
+        >
           Home
         </NavbarDesktopLink>
       </li>
       <li>
-        <NavbarDesktopLink href="#about" onClick={handleNavLinkClick}>
+        <NavbarDesktopLink
+          href={NavbarRouteLinks.About}
+          onClick={handleNavLinkClick}
+        >
           About
         </NavbarDesktopLink>
       </li>
       <li>
-        <NavbarDesktopLink href="#services" onClick={handleNavLinkClick}>
+        <NavbarDesktopLink
+          href={NavbarRouteLinks.Services}
+          onClick={handleNavLinkClick}
+        >
           Services
         </NavbarDesktopLink>
       </li>
       <li>
-        <NavbarDesktopLink href="#team" onClick={handleNavLinkClick}>
+        <NavbarDesktopLink
+          href={NavbarRouteLinks.Team}
+          onClick={handleNavLinkClick}
+        >
           Team
         </NavbarDesktopLink>
       </li>
       <li>
-        <NavbarDesktopLink href="#contact" onClick={handleNavLinkClick}>
+        <NavbarDesktopLink
+          href={NavbarRouteLinks.Contact}
+          onClick={handleNavLinkClick}
+        >
           Contact
         </NavbarDesktopLink>
       </li>

@@ -3,11 +3,12 @@ import {
   ResponsiveGrid,
   SectionTitle,
 } from "../../ui/general.style";
+import { NavbarRoutes } from "../header/navbarRoutes";
 import { ServiceImage, ServiceWrapper } from "./Services.style";
 
 export function Services() {
   return (
-    <ContentSection id="services">
+    <ContentSection id={NavbarRoutes.Services}>
       <SectionTitle>Services</SectionTitle>
       <h1>Dedicated and value rich Data Services</h1>
       <ResponsiveGrid columns={3}>

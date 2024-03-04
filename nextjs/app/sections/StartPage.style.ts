@@ -44,7 +44,7 @@ export const StartPageHeading = styled.h1`
 
 export const StartPageArrowLink = styled.a`
   position: absolute;
-  bottom: 0rem;
+  bottom: 3rem;
   padding: 1rem;
 `;
 

@@ -1,5 +1,5 @@
 import { Footer } from "./Footer";
-import { HeaderNavBar } from "./HeaderNavBar";
+import { Header } from "./header/Header";
 import { About } from "./sections/About";
 import { Contact } from "./sections/Contact";
 import { Services } from "./sections/Services";
@@ -9,7 +9,7 @@ import { Team } from "./sections/Team";
 export default function Page() {
   return (
     <>
-      <HeaderNavBar />
+      <Header />
       <StartPage />
       <About />
       <Services />

@@ -1,15 +1,12 @@
-import {
-  ContentSection,
-  ResponsiveGrid,
-  SectionTitle,
-} from "../../ui/general.style";
-import { NavbarRoutes } from "../header/navbarRoutes";
+import { ContentSection, ResponsiveGrid } from "../../ui/general.style";
+import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
+import { SectionTitle } from "./SectionTitle";
 import { ServiceImage, ServiceWrapper } from "./Services.style";
 
 export function Services() {
   return (
     <ContentSection id={NavbarRoutes.Services}>
-      <SectionTitle>Services</SectionTitle>
+      <SectionTitle title="Services" targetId={NavbarRouteLinks.Services} />
       <h1>Dedicated and value rich Data Services</h1>
       <ResponsiveGrid columns={3}>
         <ServiceWrapper>

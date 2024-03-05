@@ -1,15 +1,12 @@
-import {
-  ContentSection,
-  ResponsiveGrid,
-  SectionTitle,
-} from "../../ui/general.style";
-import { NavbarRoutes } from "../header/navbarRoutes";
+import { ContentSection, ResponsiveGrid } from "../../ui/general.style";
+import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
+import { SectionTitle } from "./SectionTitle";
 import { TeamImage, TeamImageWrapper } from "./Team.style";
 
 export function Team() {
   return (
     <ContentSection id={NavbarRoutes.Team}>
-      <SectionTitle>Team</SectionTitle>
+      <SectionTitle title="Team" targetId={NavbarRouteLinks.Team} />
       <h1>We make your project happen.</h1>
       <ResponsiveGrid columns={3}>
         <TeamImageWrapper>

@@ -1,10 +1,11 @@
-import { ContentSection, SectionTitle } from "../../ui/general.style";
-import { NavbarRoutes } from "../header/navbarRoutes";
+import { ContentSection } from "../../ui/general.style";
+import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
+import { SectionTitle } from "./SectionTitle";
 
 export function About() {
   return (
     <ContentSection id={NavbarRoutes.About}>
-      <SectionTitle>About</SectionTitle>
+      <SectionTitle title="About" targetId={NavbarRouteLinks.About} />
       <h1>
         We are an interdisciplinary Team of Data Scientists with backgrounds in
         Economics, Software Engineering and Mechatronics

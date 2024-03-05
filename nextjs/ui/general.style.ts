@@ -9,12 +9,6 @@ export const ContentSection = styled.section`
   margin: 0 auto;
 `;
 
-export const SectionTitle = styled.h3`
-  &:before {
-    content: "/ ";
-  }
-`;
-
 export const ResponsiveGrid = styled.div<{ columns: number }>`
   display: grid;
   grid-template-columns: repeat(

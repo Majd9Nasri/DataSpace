@@ -1,19 +1,20 @@
-import { ContentSection, SectionTitle } from "../../ui/general.style";
+import { ContentSection } from "../../ui/general.style";
 import { GoUp } from "../components/GoUp";
-import { NavbarRoutes } from "../header/navbarRoutes";
+import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import {
   ContactContentSplitter,
   ContactEmail,
   ContactGoUpWrapper,
   ContactNumber,
 } from "./Contact.style";
+import { SectionTitle } from "./SectionTitle";
 
 export function Contact() {
   return (
     <ContentSection id={NavbarRoutes.Contact}>
       <ContactContentSplitter>
         <div>
-          <SectionTitle>Contact</SectionTitle>
+          <SectionTitle title="Contact" targetId={NavbarRouteLinks.Contact} />
           <h1>
             Contact us and let us create projects together, we are happy to
             help.

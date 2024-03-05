@@ -13,7 +13,7 @@ export function Contact() {
   return (
     <ContentSection
       id={NavbarRoutes.Contact}
-      className="animate-slide-in-from-bottom-5rem-target-class-name"
+      className="animate-slide-in-from-bottom-5rem-target-class"
     >
       <ContactContentSplitter>
         <div>

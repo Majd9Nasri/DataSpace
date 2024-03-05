@@ -6,7 +6,7 @@ export function About() {
   return (
     <ContentSection
       id={NavbarRoutes.About}
-      className="animate-slide-in-from-bottom-5rem-target-class-name"
+      className="animate-slide-in-from-bottom-5rem-target-class"
     >
       <SectionTitle title="About" targetId={NavbarRouteLinks.About} />
       <h1>

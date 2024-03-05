@@ -12,7 +12,7 @@ import { Team } from "./sections/Team";
 export default function Page() {
   useEffect(() => {
     const slideElementsCollection = document.getElementsByClassName(
-      "animate-slide-in-from-bottom-5rem-target-class-name"
+      "animate-slide-in-from-bottom-5rem-target-class"
     );
 
     const intersectionObserver = new IntersectionObserver((entries) => {

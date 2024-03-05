@@ -4,7 +4,10 @@ import { SectionTitle } from "./SectionTitle";
 
 export function About() {
   return (
-    <ContentSection id={NavbarRoutes.About}>
+    <ContentSection
+      id={NavbarRoutes.About}
+      className="animate-slide-in-from-bottom-5rem-target-class-name"
+    >
       <SectionTitle title="About" targetId={NavbarRouteLinks.About} />
       <h1>
         We are an interdisciplinary Team of Data Scientists with backgrounds in

@@ -6,20 +6,26 @@ import { TeamImage, TeamImageWrapper } from "./Team.style";
 export function Team() {
   return (
     <ContentSection id={NavbarRoutes.Team}>
-      <SectionTitle title="Team" targetId={NavbarRouteLinks.Team} />
-      <h1>We make your project happen.</h1>
+      <SectionTitle
+        className="animate-slide-in-from-bottom-5rem-target-class-name"
+        title="Team"
+        targetId={NavbarRouteLinks.Team}
+      />
+      <h1 className="animate-slide-in-from-bottom-5rem-target-class-name">
+        We make your project happen.
+      </h1>
       <ResponsiveGrid columns={3}>
-        <TeamImageWrapper>
+        <TeamImageWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <TeamImage src="/Ahmed.jpg" alt="Ahmed" />
           <h3>Ahmed Al-Ammari</h3>
           <p>M.Sc. in Data Science - B.Eng. in Mechatronics</p>
         </TeamImageWrapper>
-        <TeamImageWrapper>
+        <TeamImageWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <TeamImage src="/Majd.jpg" alt="Majd" />
           <h3>Majd Nasri</h3>
           <p>M.Sc. in Data Science - B.Sc. in Business Information Systems</p>
         </TeamImageWrapper>
-        <TeamImageWrapper>
+        <TeamImageWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <TeamImage src="/Roman.jpg" alt="Roman" />
           <h3>Roman Dietenmeier</h3>
           <p>

@@ -6,12 +6,16 @@ import { ServiceImage, ServiceWrapper } from "./Services.style";
 export function Services() {
   return (
     <ContentSection id={NavbarRoutes.Services}>
-      <div className={"animate-slide-in-from-bottom-5rem-target-class-name"}>
-        <SectionTitle title="Services" targetId={NavbarRouteLinks.Services} />
-        <h1>Dedicated and value rich Data Services</h1>
-      </div>
+      <SectionTitle
+        className="animate-slide-in-from-bottom-5rem-target-class-name"
+        title="Services"
+        targetId={NavbarRouteLinks.Services}
+      />
+      <h1 className="animate-slide-in-from-bottom-5rem-target-class-name">
+        Dedicated and value rich Data Services
+      </h1>
       <ResponsiveGrid columns={3}>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Machine Learning</h3>
           <p>
@@ -19,31 +23,31 @@ export function Services() {
             problems.
           </p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Deep Learning</h3>
           <p>
             We perform deep learning to create unbeknown value out of your data.
           </p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Image generation</h3>
           <p>We generate images to create new and unseen content.</p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Image Recognition</h3>
           <p>We recognize images ready to serve your needs.</p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Time Series Analysis</h3>
           <p>
             We analyze time series data to predict future events and trends.
           </p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Text Analysis</h3>
           <p>
@@ -51,7 +55,7 @@ export function Services() {
             business.
           </p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Speech Recognition</h3>
           <p>
@@ -59,14 +63,14 @@ export function Services() {
             business.
           </p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Recommendation Systems</h3>
           <p>
             We build recommendation systems to increase your business revenue.
           </p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Reinforcement Learning</h3>
           <p>
@@ -74,7 +78,7 @@ export function Services() {
             processes.
           </p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Data Engineering</h3>
           <p>
@@ -82,7 +86,7 @@ export function Services() {
             data.
           </p>
         </ServiceWrapper>
-        <ServiceWrapper>
+        <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class-name">
           <ServiceImage src="/AI KI.png" />
           <h3>Neural Networks</h3>
           <p>

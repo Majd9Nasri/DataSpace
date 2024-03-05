@@ -11,7 +11,10 @@ import { SectionTitle } from "./SectionTitle";
 
 export function Contact() {
   return (
-    <ContentSection id={NavbarRoutes.Contact}>
+    <ContentSection
+      id={NavbarRoutes.Contact}
+      className="animate-slide-in-from-bottom-5rem-target-class-name"
+    >
       <ContactContentSplitter>
         <div>
           <SectionTitle title="Contact" targetId={NavbarRouteLinks.Contact} />

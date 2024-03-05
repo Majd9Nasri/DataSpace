@@ -2,6 +2,36 @@ import StyledComponentsRegistry from "../lib/registry";
 import { raleway } from "../ui/font";
 import "../ui/global.style.css";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DNA Dataspace Solutions",
+  description: "AI and Data Science Solutions for the Enterprise, for you.",
+  keywords: [
+    "AI",
+    "Data Science",
+    "Enterprise",
+    "Solutions",
+    "Service",
+    "DNA Dataspace Solutions",
+    "KI",
+  ],
+  openGraph: {
+    type: "website",
+    url: "https://www.dna-dataspace-solutions.com",
+    title: "DNA Dataspace Solutions",
+    description: "AI and Data Science Solutions for the Enterprise, for you.",
+    images: [
+      {
+        url: "https://www.dna-dataspace-solutions.com/logo.png",
+        width: 1139,
+        height: 2085,
+        alt: "DNA Dataspace Solutions",
+      },
+    ],
+  },
+};
+
 export default function RootLayout({
   children,
 }: {

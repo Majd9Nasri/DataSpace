@@ -6,13 +6,16 @@ import { ZIndex } from "../../ui/zIndex";
 import { NavbarDesktopLink } from "./NavbarDesktop.style";
 import { NavbarMobileBurgerMenu, NavbarMobileLink } from "./NavbarMobile.style";
 
-export const HeaderScrollerPercentage = styled.div<{ width: number }>`
+export const HeaderScrollerPercentage = styled.div.attrs<{ width: number }>(
+  (props) => ({
+    style: { width: `${props.width}%` },
+  })
+)`
   position: fixed;
   z-index: ${ZIndex.HeaderNavBar};
   top: 0;
   left: 0;
 
-  width: ${(p) => p.width}%;
   height: 4px;
 
   background-color: #901721;

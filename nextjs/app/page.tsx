@@ -13,14 +13,11 @@ import { ServiceWrapper } from "./sections/Services.style";
 import { StartPage } from "./sections/StartPage";
 import { Team } from "./sections/Team";
 
-export const animateSlideInFromBottom5remTargetClassName =
-  "animateSlideInFromBottom5remTargetClassName";
-
 const targetClassNames = [
   ContentSection.styledComponentId,
   FooterFooter.styledComponentId,
   ServiceWrapper.styledComponentId,
-  animateSlideInFromBottom5remTargetClassName,
+  "animate-slide-in-from-bottom-5rem-target-class-name",
 ];
 const idBlacklist = [NavbarRoutes.Services];
 

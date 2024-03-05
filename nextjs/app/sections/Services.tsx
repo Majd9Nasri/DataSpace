@@ -1,13 +1,12 @@
 import { ContentSection, ResponsiveGrid } from "../../ui/general.style";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
-import { animateSlideInFromBottom5remTargetClassName } from "../page";
 import { SectionTitle } from "./SectionTitle";
 import { ServiceImage, ServiceWrapper } from "./Services.style";
 
 export function Services() {
   return (
     <ContentSection id={NavbarRoutes.Services}>
-      <div className={animateSlideInFromBottom5remTargetClassName}>
+      <div className={"animate-slide-in-from-bottom-5rem-target-class-name"}>
         <SectionTitle title="Services" targetId={NavbarRouteLinks.Services} />
         <h1>Dedicated and value rich Data Services</h1>
       </div>

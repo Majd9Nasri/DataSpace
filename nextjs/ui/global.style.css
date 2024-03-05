@@ -5,22 +5,24 @@ body {
   padding: 0;
 }
 
-@keyframes slideInFromBottom100Percent {
+@keyframes slide-in-from-bottom-100-percent {
   0% {
     transform: translateY(100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-@keyframes slideInFromBottom5rem {
+@keyframes slide-in-from-bottom-5rem {
   0% {
     transform: translateY(5rem);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -28,10 +30,10 @@ body {
 }
 
 .animate-slide-in-from-bottom-5rem {
-  animation: slideInFromBottom5rem 1.5s forwards;
+  animation: slide-in-from-bottom-5rem 1.5s forwards;
 }
 
-@keyframes scrollDown {
+@keyframes scroll-down {
   0%,
   20%,
   50%,
@@ -39,9 +41,11 @@ body {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-30px);
   }
+
   60% {
     transform: translateY(-15px);
   }

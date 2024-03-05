@@ -39,7 +39,7 @@ export const StartPageHeading = styled.h1`
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.625rem;
-  animation: slideInFromBottom100Percent 2.5s forwards;
+  animation: slide-in-from-bottom-100-percent 2.5s forwards;
 `;
 
 export const StartPageArrowLink = styled.a`
@@ -53,6 +53,6 @@ export const StartPageArrow = styled.img`
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  animation: scrollDown 2s infinite;
+  animation: scroll-down 2s infinite;
   animation-delay: 2500ms;
 `;

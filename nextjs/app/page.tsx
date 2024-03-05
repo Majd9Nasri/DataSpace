@@ -5,22 +5,37 @@ import { ContentSection } from "../ui/general.style";
 import { Footer } from "./Footer";
 import { FooterFooter } from "./Footer.style";
 import { Header } from "./header/Header";
+import { NavbarRoutes } from "./header/navbarRoutes";
 import { About } from "./sections/About";
 import { Contact } from "./sections/Contact";
 import { Services } from "./sections/Services";
+import { ServiceWrapper } from "./sections/Services.style";
 import { StartPage } from "./sections/StartPage";
 import { Team } from "./sections/Team";
+
+export const animateSlideInFromBottom5remTargetClassName =
+  "animateSlideInFromBottom5remTargetClassName";
 
 const targetClassNames = [
   ContentSection.styledComponentId,
   FooterFooter.styledComponentId,
+  ServiceWrapper.styledComponentId,
+  animateSlideInFromBottom5remTargetClassName,
 ];
+const idBlacklist = [NavbarRoutes.Services];
 
 export default function Page() {
   useEffect(() => {
-    const targetElementCollections: Array<HTMLCollectionOf<Element>> = [];
+    const targetElements: Array<Element> = [];
     for (const className of targetClassNames) {
-      targetElementCollections.push(document.getElementsByClassName(className));
+      const collection = document.getElementsByClassName(className);
+      //@ts-expect-error
+      for (const element of collection) {
+        const id = element.getAttribute("id");
+        if (!id || !idBlacklist.includes(id)) {
+          targetElements.push(element);
+        }
+      }
     }
 
     const intersectionObserver = new IntersectionObserver((entries) => {
@@ -33,11 +48,8 @@ export default function Page() {
       }
     });
 
-    for (const collection of targetElementCollections) {
-      //@ts-expect-error
-      for (const sectionElement of collection) {
-        intersectionObserver.observe(sectionElement);
-      }
+    for (const element of targetElements) {
+      intersectionObserver.observe(element);
     }
 
     return () => {

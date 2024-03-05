@@ -5,28 +5,32 @@ import { NavbarDesktopLink } from "./NavbarDesktop.style";
 export const NavbarMobileWrapper = styled.div`
   position: relative;
   display: flex;
-  margin-left: auto;
   align-items: center;
+  margin-left: auto;
 `;
 
 export const NavbarMobileBurgerMenu = styled.span`
-  padding: 1rem;
   cursor: pointer;
-  &:before {
+  padding: 1rem;
+
+  &::before {
     content: url("/burger-menu.svg");
-    mask: url("/burger-menu.svg") no-repeat center;
     background-color: #fff;
+    mask: url("/burger-menu.svg") no-repeat center;
   }
 `;
 
 export const NavbarMobileUnorderedList = styled.ul`
   position: absolute;
-  right: ${metricsRem.pagePadding};
   top: 100%;
+  right: ${metricsRem.pagePadding};
+
   display: flex;
   flex-direction: column;
-  list-style-type: none;
+
   margin: 0;
+
+  list-style-type: none;
 `;
 
 export const NavbarMobileLink = styled(NavbarDesktopLink)`

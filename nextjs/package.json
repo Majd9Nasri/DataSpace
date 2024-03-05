@@ -4,7 +4,8 @@
     "build": "next build",
     "start": "next dev",
     "next-start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:css": "stylelint '**/*.{css,js,jsx,tsx,ts}' --fix"
   },
   "dependencies": {
     "next": "14.0.4",

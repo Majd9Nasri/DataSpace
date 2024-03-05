@@ -10,6 +10,6 @@ export const TeamImageWrapper = styled.div`
 export const TeamImage = styled.img`
   width: 18.75rem;
   height: 18.75rem;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
 `;

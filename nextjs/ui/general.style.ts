@@ -5,8 +5,8 @@ import { metrics, metricsRem } from "./metrics";
 
 export const ContentSection = styled.section`
   max-width: ${metricsRem.maxPageContentWidth};
-  padding: 0 ${metricsRem.pagePadding};
   margin: 0 auto;
+  padding: 0 ${metricsRem.pagePadding};
 `;
 
 export const ResponsiveGrid = styled.div<{ columns: number }>`

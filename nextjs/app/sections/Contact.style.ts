@@ -12,7 +12,7 @@ export const ContactEmail = styled.a`
 `;
 
 export const ContactNumber = styled.p`
-  color: rgba(0, 0, 0, 0.7);
+  color: rgb(0 0 0 / 70%);
 `;
 
 export const ContactGoUpWrapper = styled.div`

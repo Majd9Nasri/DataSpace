@@ -5,5 +5,9 @@
     "Services": "Services",
     "Team": "Team",
     "Contact": "Kontakt"
+  },
+  "About": {
+    "h1": "Wir sind ein interdisziplinäres Team von Data Scientists mit Hintergründen in Wirtschaft, Software-Engineering und Mechatronik.",
+    "p": "Wir sind leidenschaftlich darum bemüht, die Grenzen dessen, was mit Daten und Technologie möglich ist, zu erweitern, und sind entschlossen, weiterhin zu innovieren und Wert für unsere Kunden auf der Grundlage unseres umfangreichen Fachwissens und unserer Expertise zu schaffen."
   }
 }

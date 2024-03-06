@@ -9,5 +9,53 @@
   "About": {
     "h1": "Wir sind ein interdisziplinäres Team von Data Scientists mit Hintergründen in Wirtschaft, Software-Engineering und Mechatronik.",
     "p": "Wir sind leidenschaftlich darum bemüht, die Grenzen dessen, was mit Daten und Technologie möglich ist, zu erweitern, und sind entschlossen, weiterhin zu innovieren und Wert für unsere Kunden auf der Grundlage unseres umfangreichen Fachwissens und unserer Expertise zu schaffen."
+  },
+  "Services": {
+    "h1": "Unsere Datendienstleistungen",
+    "p": "Wir erklären Ihnen gerne unsere Dienstleistungen und beraten Sie, wie Sie Ihre Probleme durch uns bewältigen können.",
+    "Machine Learning": {
+      "h3": "Machine Learning",
+      "p": "Wir entwickeln und implementieren maschinelles Lernen, um Ihre Geschäftsprobleme zu lösen."
+    },
+    "Deep Learning": {
+      "h3": "Deep Learning",
+      "p": "Wir führen Deep Learning durch, um bisher unbekannten Wert aus Ihren Daten zu generieren."
+    },
+    "Image Generation": {
+      "h3": "Image Generation",
+      "p": "Wir generieren Bilder, um neuen und bisher ungesehenen Inhalt zu erstellen."
+    },
+    "Image Recognition": {
+      "h3": "Image Recognition",
+      "p": "Wir nutzen Bilderkennung, um Ihre Geschäftsprobleme zu lösen."
+    },
+    "Time Series Analysis": {
+      "h3": "Zeitreihenanalyse",
+      "p": "Wir analysieren Zeitreihen, um zukünftige Ereignisse und Trends vorherzusagen."
+    },
+    "Text Analysis": {
+      "h3": "Textanalyse",
+      "p": "Wir analysieren Textdaten, um wertvolle Informationen für Ihr Unternehmen zu extrahieren."
+    },
+    "Speech Recognition": {
+      "h3": "Spracherkennung",
+      "p": "Wir nutzen Spracherkennung, um Ihre Arbeitsabläufe zu optimieren."
+    },
+    "Recommendation Systems": {
+      "h3": "Empfehlungssysteme",
+      "p": "Wir entwickeln Empfehlungssysteme, um Ihren Geschäftsumsatz zu steigern."
+    },
+    "Reinforcement Learning": {
+      "h3": "Reinforcement Learning",
+      "p": "Wir nutzen \"Bestärkendes Lernen\", um Ihre Geschäftsprozesse zu optimieren."
+    },
+    "Data Engineering": {
+      "h3": "Data Engineering",
+      "p": "Wir erstellen Datenpipelines und Datenbanken, um Ihre Daten zu speichern und zu verarbeiten."
+    },
+    "Neural Networks": {
+      "h3": "Neuronale Netzwerke",
+      "p": "Wir bauen neuronale Netzwerke, um komplexe Probleme in Ihrem Unternehmen zu lösen."
+    }
   }
 }

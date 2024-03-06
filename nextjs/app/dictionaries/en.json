@@ -9,5 +9,53 @@
   "About": {
     "h1": "We are an interdisciplinary Team of Data Scientists with backgrounds in Economics, Software Engineering and Mechatronics",
     "p": "We are passionate to push the boundaries of what is possible with data and technology, and are committed to continue to innovate and create value based on our vast domain knowledge and expertise for our clients."
+  },
+  "Services": {
+    "h1": "Dedicated and value rich Data Services",
+    "p": "We are happy to explain our services to you and advise you on how we can help you solve your problems.",
+    "Machine Learning": {
+      "h3": "Machine Learning",
+      "p": "We build and deploy machine learning models to solve your business problems."
+    },
+    "Deep Learning": {
+      "h3": "Deep Learning",
+      "p": "We perform deep learning to create unbeknown value out of your data."
+    },
+    "Image Generation": {
+      "h3": "Image Generation",
+      "p": "We generate images to create new and unseen content."
+    },
+    "Image Recognition": {
+      "h3": "Image Recognition",
+      "p": "We recognize images ready to serve your needs."
+    },
+    "Time Series Analysis": {
+      "h3": "Time Series Analysis",
+      "p": "We analyze time series data to predict future events and trends."
+    },
+    "Text Analysis": {
+      "h3": "Text Analysis",
+      "p": "We analyze text data to extract valuable information for your business."
+    },
+    "Speech Recognition": {
+      "h3": "Speech Recognition",
+      "p": "We use speech recognition to optimize your business."
+    },
+    "Recommendation Systems": {
+      "h3": "Recommendation Systems",
+      "p": "We build recommendation systems to increase your business revenue."
+    },
+    "Reinforcement Learning": {
+      "h3": "Reinforcement Learning",
+      "p": "We perform reinforcement learning to optimize your business processes."
+    },
+    "Data Engineering": {
+      "h3": "Data Engineering",
+      "p": "We build data pipelines and databases to store and process your data."
+    },
+    "Neural Networks": {
+      "h3": "Neural Networks",
+      "p": "We build neural networks to solve complex problems in your business."
+    }
   }
 }

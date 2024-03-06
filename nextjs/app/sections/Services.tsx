@@ -1,97 +1,80 @@
+import { useContext } from "react";
 import { ContentSection, ResponsiveGrid } from "../../ui/general.style";
+import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import { SectionTitle } from "./SectionTitle";
 import { ServiceImage, ServiceWrapper } from "./Services.style";
 
 export function Services() {
+  const { dictionary } = useContext(LanguageContext);
   return (
     <ContentSection id={NavbarRoutes.Services}>
       <SectionTitle
         className="animate-slide-in-from-bottom-5rem-target-class"
-        title="Services"
+        title={dictionary.Navbar.Services}
         targetId={NavbarRouteLinks.Services}
       />
       <h1 className="animate-slide-in-from-bottom-5rem-target-class">
-        Dedicated and value rich Data Services
+        {dictionary.Services.h1}
       </h1>
+      <p className="animate-slide-in-from-bottom-5rem-target-class">
+        {dictionary.Services.p}
+      </p>
       <ResponsiveGrid columns={3}>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Machine Learning</h3>
-          <p>
-            We build and deploy machine learning models to solve your business
-            problems.
-          </p>
+          <h3>{dictionary.Services["Machine Learning"].h3}</h3>
+          <p>{dictionary.Services["Machine Learning"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Deep Learning</h3>
-          <p>
-            We perform deep learning to create unbeknown value out of your data.
-          </p>
+          <h3>{dictionary.Services["Deep Learning"].h3}</h3>
+          <p>{dictionary.Services["Deep Learning"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Image generation</h3>
-          <p>We generate images to create new and unseen content.</p>
+          <h3>{dictionary.Services["Image Generation"].h3}</h3>
+          <p>{dictionary.Services["Image Generation"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Image Recognition</h3>
-          <p>We recognize images ready to serve your needs.</p>
+          <h3>{dictionary.Services["Image Recognition"].h3}</h3>
+          <p>{dictionary.Services["Image Recognition"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Time Series Analysis</h3>
-          <p>
-            We analyze time series data to predict future events and trends.
-          </p>
+          <h3>{dictionary.Services["Time Series Analysis"].h3}</h3>
+          <p>{dictionary.Services["Time Series Analysis"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Text Analysis</h3>
-          <p>
-            We analyze text data to extract valuable information for your
-            business.
-          </p>
+          <h3>{dictionary.Services["Text Analysis"].h3}</h3>
+          <p>{dictionary.Services["Text Analysis"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Speech Recognition</h3>
-          <p>
-            We recognize speech to create new and unseen content for your
-            business.
-          </p>
+          <h3>{dictionary.Services["Speech Recognition"].h3}</h3>
+          <p>{dictionary.Services["Speech Recognition"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Recommendation Systems</h3>
-          <p>
-            We build recommendation systems to increase your business revenue.
-          </p>
+          <h3>{dictionary.Services["Recommendation Systems"].h3}</h3>
+          <p>{dictionary.Services["Recommendation Systems"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Reinforcement Learning</h3>
-          <p>
-            We perform reinforcement learning to optimize your business
-            processes.
-          </p>
+          <h3>{dictionary.Services["Reinforcement Learning"].h3}</h3>
+          <p>{dictionary.Services["Reinforcement Learning"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Data Engineering</h3>
-          <p>
-            We build data pipelines and databases to store and process your
-            data.
-          </p>
+          <h3>{dictionary.Services["Data Engineering"].h3}</h3>
+          <p>{dictionary.Services["Data Engineering"].p}</p>
         </ServiceWrapper>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
-          <h3>Neural Networks</h3>
-          <p>
-            We build neural networks to solve complex problems in your business.
-          </p>
+          <h3>{dictionary.Services["Neural Networks"].h3}</h3>
+          <p>{dictionary.Services["Neural Networks"].p}</p>
         </ServiceWrapper>
       </ResponsiveGrid>
     </ContentSection>

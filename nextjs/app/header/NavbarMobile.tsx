@@ -75,6 +75,7 @@ export function NavbarMobile() {
           <li>
             <NavbarMobileLink
               href="javascript:void(0);"
+              style={{ fontFamily: "FlagmojiFont" }}
               onClick={() => setLanguage(nextLanguage)}
             >
               {getCountryFlag(language)}

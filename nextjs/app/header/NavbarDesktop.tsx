@@ -57,6 +57,7 @@ export function NavbarDesktop() {
       <li>
         <NavbarDesktopLink
           href="javascript:void(0);"
+          style={{ fontFamily: "FlagmojiFont" }}
           onClick={() => setLanguage(nextLanguage)}
         >
           {getCountryFlag(language)}

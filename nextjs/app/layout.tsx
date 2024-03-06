@@ -57,7 +57,13 @@ export default async function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body style={{ margin: 0, padding: 0 }}>
+      <body
+        style={{
+          margin: 0,
+          padding: 0,
+          fontFamily: `'Raleway', ${raleway.className},sans-serif`,
+        }}
+      >
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>

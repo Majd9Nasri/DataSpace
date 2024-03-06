@@ -1,4 +1,5 @@
 "use client";
+import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -43,6 +44,7 @@ export function Header() {
   }
 
   useEffect(() => {
+    polyfillCountryFlagEmojis("FlagmojiFont");
     documentClientHeightRef.current = document.documentElement.clientHeight;
     window.addEventListener("scroll", updateVerticalScrollPercentage);
     window.addEventListener("resize", handlePageWidthChange);

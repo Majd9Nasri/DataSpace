@@ -1,14 +1,18 @@
-import { ContentSection } from "../../../ui/general.style";
+import { useContext } from "react";
+import { ContentSection } from "../../ui/general.style";
+import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import { SectionTitle } from "./SectionTitle";
 
 export function About() {
+  const { dictionary } = useContext(LanguageContext);
   return (
     <ContentSection
       id={NavbarRoutes.About}
       className="animate-slide-in-from-bottom-5rem-target-class"
     >
       <SectionTitle title="About" targetId={NavbarRouteLinks.About} />
+      {dictionary["hello world"]}
       <h1>
         We are an interdisciplinary Team of Data Scientists with backgrounds in
         Economics, Software Engineering and Mechatronics

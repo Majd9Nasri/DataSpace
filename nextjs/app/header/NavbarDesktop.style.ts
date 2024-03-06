@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { metrics } from "../../../ui/metrics";
+import { metrics } from "../../ui/metrics";
 
 export const NavbarDesktopUnorderedList = styled.ul`
   display: flex;

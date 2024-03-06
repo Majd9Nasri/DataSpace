@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { handleNavLinkClick } from "../../../lib/clientUtility";
+import { useContext, useState } from "react";
+import { handleNavLinkClick } from "../../lib/clientUtility";
+import { getCountryFlag, getNextLanguage } from "../../lib/serverUtility";
+import LanguageContext from "../components/LanguageContext";
 import {
   NavbarMobileBurgerMenu,
   NavbarMobileLink,
@@ -11,7 +13,10 @@ import {
 import { NavbarRouteLinks } from "./navbarRoutes";
 
 export function NavbarMobile() {
+  const { language, setLanguage } = useContext(LanguageContext);
   const [open, setOpen] = useState(false);
+
+  const nextLanguage = getNextLanguage(language);
 
   function handleBurgerMenuClick() {
     setOpen((open) => !open);
@@ -65,6 +70,14 @@ export function NavbarMobile() {
               onClick={handleNavLinkMobileClick}
             >
               Contact
+            </NavbarMobileLink>
+          </li>
+          <li>
+            <NavbarMobileLink
+              href="javascript:void(0);"
+              onClick={() => setLanguage(nextLanguage)}
+            >
+              {getCountryFlag(language)}
             </NavbarMobileLink>
           </li>
         </NavbarMobileUnorderedList>

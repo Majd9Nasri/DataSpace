@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { metricsRem } from "../../ui/metrics";
+import { metricsRem } from "../ui/metrics";
 
 export const FooterFooter = styled.footer`
   max-width: ${metricsRem.maxPageContentWidth};

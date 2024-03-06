@@ -1,4 +1,7 @@
-import { handleNavLinkClick } from "../../../lib/clientUtility";
+import { useContext } from "react";
+import { handleNavLinkClick } from "../../lib/clientUtility";
+import { getCountryFlag, getNextLanguage } from "../../lib/serverUtility";
+import LanguageContext from "../components/LanguageContext";
 import {
   NavbarDesktopLink,
   NavbarDesktopUnorderedList,
@@ -6,6 +9,9 @@ import {
 import { NavbarRouteLinks } from "./navbarRoutes";
 
 export function NavbarDesktop() {
+  const { language, setLanguage } = useContext(LanguageContext);
+  const nextLanguage = getNextLanguage(language);
+
   return (
     <NavbarDesktopUnorderedList>
       <li>
@@ -46,6 +52,14 @@ export function NavbarDesktop() {
           onClick={handleNavLinkClick}
         >
           Contact
+        </NavbarDesktopLink>
+      </li>
+      <li>
+        <NavbarDesktopLink
+          href="javascript:void(0);"
+          onClick={() => setLanguage(nextLanguage)}
+        >
+          {getCountryFlag(language)}
         </NavbarDesktopLink>
       </li>
     </NavbarDesktopUnorderedList>

@@ -1,4 +1,4 @@
-import { ContentSection, ResponsiveGrid } from "../../../ui/general.style";
+import { ContentSection, ResponsiveGrid } from "../../ui/general.style";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import { SectionTitle } from "./SectionTitle";
 import { ServiceImage, ServiceWrapper } from "./Services.style";

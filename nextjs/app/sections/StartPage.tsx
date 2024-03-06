@@ -1,4 +1,4 @@
-import { handleNavLinkClick } from "../../../lib/clientUtility";
+import { handleNavLinkClick } from "../../lib/clientUtility";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import {
   StartPageArrow,

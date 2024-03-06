@@ -1,6 +1,6 @@
 "use client";
 
-import { createMoveToIdFunction } from "../../../lib/clientUtility";
+import { createMoveToIdFunction } from "../../lib/clientUtility";
 import { SectionTitleHeading } from "./SectionTitle.style";
 
 type SectionTitleProps = {

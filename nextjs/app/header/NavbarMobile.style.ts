@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { metricsRem } from "../../../ui/metrics";
+import { metricsRem } from "../../ui/metrics";
 import { NavbarDesktopLink } from "./NavbarDesktop.style";
 
 export const NavbarMobileWrapper = styled.div`

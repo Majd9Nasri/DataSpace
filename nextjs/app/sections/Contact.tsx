@@ -1,4 +1,4 @@
-import { ContentSection } from "../../../ui/general.style";
+import { ContentSection } from "../../ui/general.style";
 import { GoUp } from "../components/GoUp";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import {

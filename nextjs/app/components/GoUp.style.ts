@@ -2,12 +2,12 @@
 
 import styled from "styled-components";
 
-export const GoUpDiv = styled.div`
+export const GoUpDiv = styled.div<{ text: string }>`
   cursor: pointer;
   position: relative;
 
   &::before {
-    content: "go up";
+    content: "${(p) => p.text}";
 
     position: absolute;
     top: -50px;
@@ -17,5 +17,6 @@ export const GoUpDiv = styled.div`
     width: 4rem;
 
     color: rgb(0 0 0 / 85%);
+    white-space: nowrap;
   }
 `;

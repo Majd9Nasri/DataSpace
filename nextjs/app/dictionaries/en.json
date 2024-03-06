@@ -60,5 +60,11 @@
   },
   "Team": {
     "h1": "We make your project happen."
+  },
+  "Contact": {
+    "h1": "Contact us and let us create projects together, we are happy to help."
+  },
+  "Components": {
+    "GoUp": "go up"
   }
 }

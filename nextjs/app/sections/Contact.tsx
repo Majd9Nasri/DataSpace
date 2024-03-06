@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { ContentSection } from "../../ui/general.style";
 import { GoUp } from "../components/GoUp";
+import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import {
   ContactContentSplitter,
@@ -10,6 +12,8 @@ import {
 import { SectionTitle } from "./SectionTitle";
 
 export function Contact() {
+  const { dictionary } = useContext(LanguageContext);
+
   return (
     <ContentSection
       id={NavbarRoutes.Contact}
@@ -17,11 +21,11 @@ export function Contact() {
     >
       <ContactContentSplitter>
         <div>
-          <SectionTitle title="Contact" targetId={NavbarRouteLinks.Contact} />
-          <h1>
-            Contact us and let us create projects together, we are happy to
-            help.
-          </h1>
+          <SectionTitle
+            title={dictionary.Navbar.Team}
+            targetId={NavbarRouteLinks.Contact}
+          />
+          <h1>{dictionary.Contact.h1}</h1>
           <ContactEmail href="mailto:contact@dna-dataspace-solutions.com">
             contact@dna-dataspace-solutions.com
           </ContactEmail>

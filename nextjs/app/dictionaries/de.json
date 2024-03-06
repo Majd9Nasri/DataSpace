@@ -60,5 +60,11 @@
   },
   "Team": {
     "h1": "Wir lassen Ihr Projekt Wirklichkeit werden."
+  },
+  "Contact": {
+    "h1": "Kontaktieren Sie uns und lassen Sie uns gemeinsam Projekte erstellen, wir helfen Ihnen gerne."
+  },
+  "Components": {
+    "GoUp": "nach oben"
   }
 }

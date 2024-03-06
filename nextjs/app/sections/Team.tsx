@@ -1,18 +1,22 @@
+import { useContext } from "react";
 import { ContentSection, ResponsiveGrid } from "../../ui/general.style";
+import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import { SectionTitle } from "./SectionTitle";
 import { TeamImage, TeamImageWrapper } from "./Team.style";
 
 export function Team() {
+  const { dictionary } = useContext(LanguageContext);
+
   return (
     <ContentSection id={NavbarRoutes.Team}>
       <SectionTitle
         className="animate-slide-in-from-bottom-5rem-target-class"
-        title="Team"
+        title={dictionary.Navbar.Team}
         targetId={NavbarRouteLinks.Team}
       />
       <h1 className="animate-slide-in-from-bottom-5rem-target-class">
-        We make your project happen.
+        {dictionary.Team.h1}
       </h1>
       <ResponsiveGrid columns={3}>
         <TeamImageWrapper className="animate-slide-in-from-bottom-5rem-target-class">

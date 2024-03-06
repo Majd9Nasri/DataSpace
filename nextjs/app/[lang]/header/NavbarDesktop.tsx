@@ -1,4 +1,4 @@
-import { handleNavLinkClick } from "../../lib/clientUtility";
+import { handleNavLinkClick } from "../../../lib/clientUtility";
 import {
   NavbarDesktopLink,
   NavbarDesktopUnorderedList,

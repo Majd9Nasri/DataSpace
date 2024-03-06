@@ -1,4 +1,4 @@
-import { ContentSection } from "../../ui/general.style";
+import { ContentSection } from "../../../ui/general.style";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import { SectionTitle } from "./SectionTitle";
 

@@ -1,8 +1,8 @@
 "use client";
 
 import styled from "styled-components";
-import { metrics, metricsRem } from "../../ui/metrics";
-import { ZIndex } from "../../ui/zIndex";
+import { metrics, metricsRem } from "../../../ui/metrics";
+import { ZIndex } from "../../../ui/zIndex";
 import { NavbarDesktopLink } from "./NavbarDesktop.style";
 import { NavbarMobileBurgerMenu, NavbarMobileLink } from "./NavbarMobile.style";
 

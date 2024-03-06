@@ -1,8 +1,9 @@
-import StyledComponentsRegistry from "../lib/registry";
-import { raleway } from "../ui/font";
-import "../ui/global.style.css";
+import StyledComponentsRegistry from "../../lib/registry";
+import { raleway } from "../../ui/font";
+import "../../ui/global.style.css";
 
 import { Metadata } from "next";
+import { getDictionary } from "./dictionaries";
 
 export const metadata: Metadata = {
   title: "DNA Dataspace Solutions",
@@ -32,14 +33,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return [{ lang: "de" }, { lang: "en" }];
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { lang: string };
 }) {
+  const dict = await getDictionary(params.lang);
   return (
     <html
-      lang="en"
+      lang={params.lang}
       className={raleway.className}
       style={{ margin: 0, padding: 0 }}
     >
@@ -58,6 +66,7 @@ export default function RootLayout({
         ></link>
       </head>
       <body style={{ margin: 0, padding: 0 }}>
+        {dict["hello world"]}
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>

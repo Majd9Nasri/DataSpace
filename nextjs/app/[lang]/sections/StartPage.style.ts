@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { ZIndex } from "../../ui/zIndex";
+import { ZIndex } from "../../../ui/zIndex";
 
 export const StartPageWrapper = styled.section`
   position: relative;

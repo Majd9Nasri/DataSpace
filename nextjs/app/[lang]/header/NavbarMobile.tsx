@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { handleNavLinkClick } from "../../lib/clientUtility";
+import { handleNavLinkClick } from "../../../lib/clientUtility";
 import {
   NavbarMobileBurgerMenu,
   NavbarMobileLink,

@@ -9,7 +9,7 @@ import {
 import { NavbarRouteLinks } from "./navbarRoutes";
 
 export function NavbarDesktop() {
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { dictionary, language, setLanguage } = useContext(LanguageContext);
   const nextLanguage = getNextLanguage(language);
 
   return (
@@ -19,7 +19,7 @@ export function NavbarDesktop() {
           href={NavbarRouteLinks.Home}
           onClick={handleNavLinkClick}
         >
-          Home
+          {dictionary.Navbar.Home}
         </NavbarDesktopLink>
       </li>
       <li>
@@ -27,7 +27,7 @@ export function NavbarDesktop() {
           href={NavbarRouteLinks.About}
           onClick={handleNavLinkClick}
         >
-          About
+          {dictionary.Navbar.About}
         </NavbarDesktopLink>
       </li>
       <li>
@@ -35,7 +35,7 @@ export function NavbarDesktop() {
           href={NavbarRouteLinks.Services}
           onClick={handleNavLinkClick}
         >
-          Services
+          {dictionary.Navbar.Services}
         </NavbarDesktopLink>
       </li>
       <li>
@@ -43,7 +43,7 @@ export function NavbarDesktop() {
           href={NavbarRouteLinks.Team}
           onClick={handleNavLinkClick}
         >
-          Team
+          {dictionary.Navbar.Team}
         </NavbarDesktopLink>
       </li>
       <li>
@@ -51,7 +51,7 @@ export function NavbarDesktop() {
           href={NavbarRouteLinks.Contact}
           onClick={handleNavLinkClick}
         >
-          Contact
+          {dictionary.Navbar.Contact}
         </NavbarDesktopLink>
       </li>
       <li>

@@ -13,7 +13,7 @@ import {
 import { NavbarRouteLinks } from "./navbarRoutes";
 
 export function NavbarMobile() {
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { dictionary, language, setLanguage } = useContext(LanguageContext);
   const [open, setOpen] = useState(false);
 
   const nextLanguage = getNextLanguage(language);
@@ -37,7 +37,7 @@ export function NavbarMobile() {
               href={NavbarRouteLinks.Home}
               onClick={handleNavLinkMobileClick}
             >
-              Home
+              {dictionary.Navbar.Home}
             </NavbarMobileLink>
           </li>
           <li>
@@ -45,7 +45,7 @@ export function NavbarMobile() {
               href={NavbarRouteLinks.About}
               onClick={handleNavLinkMobileClick}
             >
-              About
+              {dictionary.Navbar.About}
             </NavbarMobileLink>
           </li>
           <li>
@@ -53,7 +53,7 @@ export function NavbarMobile() {
               href={NavbarRouteLinks.Services}
               onClick={handleNavLinkMobileClick}
             >
-              Services
+              {dictionary.Navbar.Services}
             </NavbarMobileLink>
           </li>
           <li>
@@ -61,7 +61,7 @@ export function NavbarMobile() {
               href={NavbarRouteLinks.Team}
               onClick={handleNavLinkMobileClick}
             >
-              Team
+              {dictionary.Navbar.Team}
             </NavbarMobileLink>
           </li>
           <li>
@@ -69,7 +69,7 @@ export function NavbarMobile() {
               href={NavbarRouteLinks.Contact}
               onClick={handleNavLinkMobileClick}
             >
-              Contact
+              {dictionary.Navbar.Contact}
             </NavbarMobileLink>
           </li>
           <li>

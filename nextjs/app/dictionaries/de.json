@@ -1,3 +1,9 @@
 {
-  "hello world": "Hallo Welt"
+  "Navbar": {
+    "Home": "Home",
+    "About": "Über uns",
+    "Services": "Services",
+    "Team": "Team",
+    "Contact": "Kontakt"
+  }
 }

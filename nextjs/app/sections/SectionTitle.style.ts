@@ -1,10 +1,9 @@
 "use client";
 
 import styled from "styled-components";
-import { color } from "../../ui/color";
 
 export const SectionTitleHeading = styled.h3`
-  color: ${color.accent};
+  color: ${(p) => p.theme.color.accent};
   &::before {
     content: "/ ";
   }

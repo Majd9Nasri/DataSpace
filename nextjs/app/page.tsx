@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { darkTheme, whiteTheme } from "../ui/theme";
 import { Footer } from "./Footer";
+import DarkModeContext from "./components/DarkModeContext";
 import LanguageContext from "./components/LanguageContext";
 import de from "./dictionaries/de.json";
 import en from "./dictionaries/en.json";
@@ -13,6 +16,7 @@ import { StartPage } from "./sections/StartPage";
 import { Team } from "./sections/Team";
 
 export default function Page() {
+  const [useDarkMode, setUseDarkMode] = useState(false);
   const [language, setLanguage] = useState("de");
   const [dictionary, setDictionary] = useState(de);
 
@@ -56,13 +60,17 @@ export default function Page() {
 
   return (
     <LanguageContext.Provider value={{ dictionary, language, setLanguage }}>
-      <Header />
-      <StartPage />
-      <About />
-      <Services />
-      <Team />
-      <Contact />
-      <Footer />
+      <DarkModeContext.Provider value={{ useDarkMode, setUseDarkMode }}>
+        <ThemeProvider theme={useDarkMode ? darkTheme : whiteTheme}>
+          <Header />
+          <StartPage />
+          <About />
+          <Services />
+          <Team />
+          <Contact />
+          <Footer />
+        </ThemeProvider>
+      </DarkModeContext.Provider>
     </LanguageContext.Provider>
   );
 }

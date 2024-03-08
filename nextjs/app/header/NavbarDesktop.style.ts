@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import { color } from "../../ui/color";
 import { metrics } from "../../ui/metrics";
 
 export const NavbarDesktopUnorderedList = styled.ul`
@@ -20,7 +19,7 @@ export const NavbarDesktopLink = styled.a`
   transition: 0.5s;
 
   &:hover {
-    color: ${color.accent} !important;
+    color: ${(p) => p.theme.color.accent} !important;
     background-color: #fff;
   }
 `;

@@ -35,17 +35,6 @@ export const HeaderLogoLink = styled.a`
   text-decoration: none;
 `;
 
-export const HeaderLogoSpan = styled.span`
-  margin-left: 0.625rem;
-
-  font-weight: ${metrics.headerFontWeight};
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.125rem;
-
-  transition: 0.5s;
-`;
-
 export const HeaderHeader = styled.header<{ enableBackground: boolean }>`
   position: fixed;
   z-index: ${ZIndex.HeaderNavBar};
@@ -58,10 +47,6 @@ export const HeaderHeader = styled.header<{ enableBackground: boolean }>`
     rgba(255, 255, 255, ${(p) => (p.enableBackground ? 1 : 0)});
 
   transition: 0.5s;
-
-  ${HeaderLogoSpan} {
-    color: ${(p) => (p.enableBackground ? "#000" : undefined)};
-  }
 
   ${NavbarDesktopLink} {
     color: ${(p) => (p.enableBackground ? "#000" : undefined)};

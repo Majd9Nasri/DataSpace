@@ -31,16 +31,6 @@ export const StartPageWrapper = styled.section`
   }
 `;
 
-export const StartPageHeading = styled.h1`
-  font-size: 3.75rem;
-  font-weight: 900;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.625rem;
-
-  animation: slide-in-from-bottom-100-percent 2.5s forwards;
-`;
-
 export const StartPageArrowLink = styled.a`
   position: absolute;
   bottom: 3rem;

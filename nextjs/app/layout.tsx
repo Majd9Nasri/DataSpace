@@ -5,7 +5,7 @@ import "../ui/global.style.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DNA Dataspace Solutions",
+  title: "4NEX AI Solutions",
   description: "AI and Data Science Solutions for the Enterprise, for you.",
   keywords: [
     "AI",
@@ -13,20 +13,22 @@ export const metadata: Metadata = {
     "Enterprise",
     "Solutions",
     "Service",
-    "DNA Dataspace Solutions",
+    "4NEX",
+    "4",
+    "NEX",
     "KI",
   ],
   openGraph: {
     type: "website",
     url: "https://www.dna-dataspace-solutions.com",
-    title: "DNA Dataspace Solutions",
+    title: "4NEX AI Solutions",
     description: "AI and Data Science Solutions for the Enterprise, for you.",
     images: [
       {
         url: "https://www.dna-dataspace-solutions.com/logo.png",
         width: 1139,
         height: 2085,
-        alt: "DNA Dataspace Solutions",
+        alt: "4NEX AI Solutions",
       },
     ],
   },
@@ -45,7 +47,7 @@ export default async function RootLayout({
     >
       <head>
         <meta charSet="utf-8" />
-        <title>DNA Dataspace Solutions</title>
+        <title>4NEX AI Solutions</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

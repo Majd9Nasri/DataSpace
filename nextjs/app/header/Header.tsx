@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import {
   HeaderHeader,
   HeaderLogoLink,
-  HeaderLogoSpan,
   HeaderNavigation,
   HeaderScrollerPercentage,
 } from "./Header.style";
@@ -63,7 +62,6 @@ export function Header() {
       <HeaderNavigation>
         <HeaderLogoLink href={NavbarRouteLinks.Home}>
           <Image src="/logo.png" width="30" height="55" alt="Logo" />
-          <HeaderLogoSpan>Data Space</HeaderLogoSpan>
         </HeaderLogoLink>
         {navbarState === NavbarState.Mobile ? <NavbarMobile /> : null}
         {navbarState === NavbarState.Desktop ? <NavbarDesktop /> : null}

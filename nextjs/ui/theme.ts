@@ -5,6 +5,20 @@ const commonTheme = {
   },
 };
 
-export const whiteTheme = { ...commonTheme };
+export const whiteTheme = {
+  ...commonTheme,
+  color: { ...commonTheme.color, text: "#000", textInverse: "#fff" },
+  header: {
+    background: "#fff",
+    backgroundRGB: 255,
+  },
+};
 
-export const darkTheme = { ...commonTheme };
+export const darkTheme = {
+  ...commonTheme,
+  color: { ...commonTheme.color, text: "#fff", textInverse: "#000" },
+  header: {
+    background: "#000",
+    backgroundRGB: 0,
+  },
+};

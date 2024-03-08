@@ -9,6 +9,7 @@ import LanguageContext from "./components/LanguageContext";
 import de from "./dictionaries/de.json";
 import en from "./dictionaries/en.json";
 import { Header } from "./header/Header";
+import { AppWrapper } from "./page.style";
 import { About } from "./sections/About";
 import { Contact } from "./sections/Contact";
 import { Services } from "./sections/Services";
@@ -62,13 +63,15 @@ export default function Page() {
     <LanguageContext.Provider value={{ dictionary, language, setLanguage }}>
       <DarkModeContext.Provider value={{ useDarkMode, setUseDarkMode }}>
         <ThemeProvider theme={useDarkMode ? darkTheme : whiteTheme}>
-          <Header />
-          <StartPage />
-          <About />
-          <Services />
-          <Team />
-          <Contact />
-          <Footer />
+          <AppWrapper>
+            <Header />
+            <StartPage />
+            <About />
+            <Services />
+            <Team />
+            <Contact />
+            <Footer />
+          </AppWrapper>
         </ThemeProvider>
       </DarkModeContext.Provider>
     </LanguageContext.Provider>

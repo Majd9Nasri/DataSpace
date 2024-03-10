@@ -37,6 +37,11 @@ export function Team() {
             Engineering
           </p>
         </TeamImageWrapper>
+        <TeamImageWrapper className="animate-slide-in-from-bottom-5rem-target-class">
+          <TeamImage src="/Daniel.jpeg" alt="Roman" />
+          <h3>Daniel Pantel</h3>
+          <p>M.Sc. in Data Science - B.Sc. in Business Information Systems</p>
+        </TeamImageWrapper>
       </ResponsiveGrid>
     </ContentSection>
   );

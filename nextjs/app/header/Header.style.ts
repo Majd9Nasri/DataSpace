@@ -35,6 +35,10 @@ export const HeaderLogoLink = styled.a`
   text-decoration: none;
 `;
 
+export const HeaderLogoImage = styled.img`
+  height: 3.4375rem;
+`;
+
 export const HeaderHeader = styled.header<{ enableBackground: boolean }>`
   position: fixed;
   z-index: ${ZIndex.HeaderNavBar};

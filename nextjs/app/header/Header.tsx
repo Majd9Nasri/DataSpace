@@ -1,9 +1,10 @@
 "use client";
 import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import DarkModeContext from "../components/DarkModeContext";
 import {
   HeaderHeader,
+  HeaderLogoImage,
   HeaderLogoLink,
   HeaderNavigation,
   HeaderScrollerPercentage,
@@ -19,10 +20,13 @@ const enum NavbarState {
 }
 
 export function Header() {
+  const { useDarkMode } = useContext(DarkModeContext);
   const [verticalScroll, setVerticalScroll] = useState(0);
   const [verticalScrollPercentage, setVerticalScrollPercentage] = useState(0);
   const [navbarState, setNavbarState] = useState(NavbarState.Limbo);
   const documentClientHeightRef = useRef(0);
+
+  const enableBackground = verticalScroll > documentClientHeightRef.current / 2;
 
   function updateVerticalScrollPercentage() {
     setVerticalScroll(window.scrollY);
@@ -54,14 +58,22 @@ export function Header() {
       window.removeEventListener("resize", handlePageWidthChange);
     };
   }, []);
+
   return (
-    <HeaderHeader
-      enableBackground={verticalScroll > documentClientHeightRef.current / 2}
-    >
+    <HeaderHeader enableBackground={enableBackground}>
       <HeaderScrollerPercentage width={verticalScrollPercentage} />
       <HeaderNavigation>
         <HeaderLogoLink href={NavbarRouteLinks.Home}>
-          <Image src="/logo.png" width="30" height="55" alt="Logo" />
+          <HeaderLogoImage
+            src={
+              !enableBackground
+                ? "./blackLogoToUpdate.png"
+                : useDarkMode
+                ? "./blackLogoToUpdate.png"
+                : "./whiteLogoToUpdate.png"
+            }
+            alt="4NEX Logo"
+          />
         </HeaderLogoLink>
         {navbarState === NavbarState.Mobile ? <NavbarMobile /> : null}
         {navbarState === NavbarState.Desktop ? <NavbarDesktop /> : null}

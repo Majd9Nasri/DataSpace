@@ -5,6 +5,7 @@ import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import {
   StartPageArrow,
   StartPageArrowLink,
+  StartPageImage,
   StartPageWrapper,
 } from "./StartPage.style";
 
@@ -28,6 +29,7 @@ export function StartPage() {
       id={NavbarRoutes.Home}
       backgroundImage={imageSources[imageIndex]}
     >
+      <StartPageImage src="./blackLogoToUpdate.png" />
       <StartPageArrowLink
         href={NavbarRouteLinks.About}
         onClick={handleNavLinkClick}

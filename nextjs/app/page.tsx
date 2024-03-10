@@ -33,6 +33,12 @@ export default function Page() {
   }, [language]);
 
   useEffect(() => {
+    document.body.style.backgroundColor = useDarkMode
+      ? darkTheme.color.background
+      : whiteTheme.color.background;
+  }, [useDarkMode]);
+
+  useEffect(() => {
     setUseDarkMode(
       window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches

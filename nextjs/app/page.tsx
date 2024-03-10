@@ -33,6 +33,10 @@ export default function Page() {
   }, [language]);
 
   useEffect(() => {
+    setUseDarkMode(
+      window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    );
     setLanguage(navigator.language);
 
     const slideElementsCollection = document.getElementsByClassName(

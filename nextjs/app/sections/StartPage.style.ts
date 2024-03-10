@@ -35,7 +35,6 @@ export const StartPageWrapper = styled.section<{ backgroundImage: string }>`
 
 export const StartPageImage = styled.img`
   height: 8rem;
-
   animation: slide-in-from-bottom-100-percent 2.5s forwards;
 `;
 

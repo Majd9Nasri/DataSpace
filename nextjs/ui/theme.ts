@@ -7,7 +7,12 @@ const commonTheme = {
 
 export const whiteTheme = {
   ...commonTheme,
-  color: { ...commonTheme.color, text: "#000", textInverse: "#fff" },
+  color: {
+    ...commonTheme.color,
+    text: "#000",
+    textInverse: "#fff",
+    background: "#fff",
+  },
   header: {
     background: "#fff",
     backgroundRGB: 255,
@@ -16,7 +21,12 @@ export const whiteTheme = {
 
 export const darkTheme = {
   ...commonTheme,
-  color: { ...commonTheme.color, text: "#fff", textInverse: "#000" },
+  color: {
+    ...commonTheme.color,
+    text: "#fff",
+    textInverse: "#000",
+    background: "#000",
+  },
   header: {
     background: "#000",
     backgroundRGB: 0,

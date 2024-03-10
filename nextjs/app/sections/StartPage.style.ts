@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { ZIndex } from "../../ui/zIndex";
 
-export const StartPageWrapper = styled.section`
+export const StartPageWrapper = styled.section<{ backgroundImage: string }>`
   position: relative;
   z-index: ${ZIndex.Default};
 
@@ -13,11 +13,13 @@ export const StartPageWrapper = styled.section`
   width: 100%;
   height: 100vh;
 
-  background-image: url("/kam.webp");
+  background-image: url(${(p) => p.backgroundImage});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   box-shadow: 0 0 0.625rem #000;
+
+  transition: background-image 0.5s ease-in-out;
 
   &::before {
     content: "";

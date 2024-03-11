@@ -3,6 +3,7 @@ const commonTheme = {
     accent: "#156ab7",
     text: "#fff",
   },
+  backgroundInverseAlpha: 0.1,
 };
 
 export const whiteTheme = {
@@ -11,6 +12,7 @@ export const whiteTheme = {
     ...commonTheme.color,
     text: "#000",
     background: "#fff",
+    backgroundInverseRGB: 0,
     textRGB: 0,
   },
   header: {
@@ -25,6 +27,7 @@ export const darkTheme = {
     ...commonTheme.color,
     text: "#fff",
     background: "#000",
+    backgroundInverseRGB: 255,
     textRGB: 255,
   },
   header: {

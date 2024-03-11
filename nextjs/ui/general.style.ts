@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { metrics, metricsRem } from "./metrics";
 
 export const ContentSection = styled.section`
+  display: inline-block;
+  width: 100%;
   max-width: ${metricsRem.maxPageContentWidth};
   margin: 0 auto;
   padding: 0 ${metricsRem.pagePadding};

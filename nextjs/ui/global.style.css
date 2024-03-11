@@ -30,7 +30,7 @@ body {
 }
 
 .animate-slide-in-from-bottom-5rem {
-  animation: slide-in-from-bottom-5rem 1.5s forwards;
+  animation: slide-in-from-bottom-5rem 1.5s forwards ease-out;
 }
 
 @keyframes scroll-down {

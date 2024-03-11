@@ -3,6 +3,10 @@
 import styled from "styled-components";
 import { metrics, metricsRem } from "./metrics";
 
+export const ContentSectionWrapper = styled.div`
+  width: 100%;
+`;
+
 export const ContentSection = styled.section`
   max-width: ${metricsRem.maxPageContentWidth};
   margin: 0 auto;

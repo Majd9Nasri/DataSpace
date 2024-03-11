@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ContentSection } from "../../ui/general.style";
+import { ContentSection, ContentSectionWrapper } from "../../ui/general.style";
 import { GoUp } from "../components/GoUp";
 import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
@@ -15,26 +15,25 @@ export function Contact() {
   const { dictionary } = useContext(LanguageContext);
 
   return (
-    <ContentSection
-      id={NavbarRoutes.Contact}
-      className="animate-slide-in-from-bottom-5rem-target-class"
-    >
-      <ContactContentSplitter>
-        <div>
-          <SectionTitle
-            title={dictionary.Navbar.Team}
-            targetId={NavbarRouteLinks.Contact}
-          />
-          <h1>{dictionary.Contact.h1}</h1>
-          <ContactEmail href="mailto:contact@dna-dataspace-solutions.com">
-            contact@dna-dataspace-solutions.com
-          </ContactEmail>
-          <ContactNumber>+49 (0) 152 254 079 40</ContactNumber>
-        </div>
-        <ContactGoUpWrapper>
-          <GoUp />
-        </ContactGoUpWrapper>
-      </ContactContentSplitter>
-    </ContentSection>
+    <ContentSectionWrapper className="animate-slide-in-from-bottom-5rem-target-class">
+      <ContentSection id={NavbarRoutes.Contact}>
+        <ContactContentSplitter>
+          <div>
+            <SectionTitle
+              title={dictionary.Navbar.Contact}
+              targetId={NavbarRouteLinks.Contact}
+            />
+            <h1>{dictionary.Contact.h1}</h1>
+            <ContactEmail href="mailto:contact@dna-dataspace-solutions.com">
+              contact@dna-dataspace-solutions.com
+            </ContactEmail>
+            <ContactNumber>+49 (0) 152 254 079 40</ContactNumber>
+          </div>
+          <ContactGoUpWrapper>
+            <GoUp />
+          </ContactGoUpWrapper>
+        </ContactContentSplitter>
+      </ContentSection>
+    </ContentSectionWrapper>
   );
 }

@@ -4,9 +4,7 @@ import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, whiteTheme } from "../ui/theme";
 import { Footer } from "./Footer";
-import DarkModeContext, {
-  UseDarkModeState,
-} from "./components/DarkModeContext";
+import DarkModeContext from "./components/DarkModeContext";
 import LanguageContext from "./components/LanguageContext";
 import de from "./dictionaries/de.json";
 import en from "./dictionaries/en.json";
@@ -19,7 +17,7 @@ import { StartPage } from "./sections/StartPage";
 import { Team } from "./sections/Team";
 
 export default function Page() {
-  const [useDarkMode, setUseDarkMode] = useState(UseDarkModeState.Limbo);
+  const [useDarkMode, setUseDarkMode] = useState<boolean>(null);
   const [language, setLanguage] = useState("");
   const [dictionary, setDictionary] = useState(de);
 
@@ -37,16 +35,11 @@ export default function Page() {
   }, [language]);
 
   useEffect(() => {
-    switch (useDarkMode) {
-      case UseDarkModeState.Dark:
-        document.body.style.backgroundColor = darkTheme.color.background;
-        break;
-      default:
-        document.body.style.backgroundColor = whiteTheme.color.background;
-        break;
-    }
+    document.body.style.backgroundColor = useDarkMode
+      ? darkTheme.color.background
+      : whiteTheme.color.background;
 
-    if (useDarkMode === UseDarkModeState.Limbo) return;
+    if (useDarkMode === null) return;
 
     localStorage.setItem("useDarkMode", `${useDarkMode}`);
   }, [useDarkMode]);
@@ -54,13 +47,9 @@ export default function Page() {
   useEffect(() => {
     setUseDarkMode(
       localStorage.getItem("useDarkMode")
-        ? localStorage.getItem("useDarkMode") == `${UseDarkModeState.Dark}`
-          ? UseDarkModeState.Dark
-          : UseDarkModeState.White
+        ? localStorage.getItem("useDarkMode") === "true"
         : window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? UseDarkModeState.Dark
-        : UseDarkModeState.White
+            window.matchMedia("(prefers-color-scheme: dark)").matches
     );
 
     setLanguage(localStorage.getItem("language") ?? navigator.language);
@@ -92,9 +81,7 @@ export default function Page() {
   return (
     <LanguageContext.Provider value={{ dictionary, language, setLanguage }}>
       <DarkModeContext.Provider value={{ useDarkMode, setUseDarkMode }}>
-        <ThemeProvider
-          theme={useDarkMode === UseDarkModeState.Dark ? darkTheme : whiteTheme}
-        >
+        <ThemeProvider theme={useDarkMode ? darkTheme : whiteTheme}>
           <AppWrapper>
             <Header />
             <StartPage />

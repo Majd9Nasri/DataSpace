@@ -1,16 +1,10 @@
 import { createContext } from "react";
 
-export const enum UseDarkModeState {
-  Limbo = 0,
-  White,
-  Dark,
-}
-
 const DarkModeContext = createContext<{
-  useDarkMode: UseDarkModeState;
-  setUseDarkMode: (useDarkMode: UseDarkModeState) => void;
+  useDarkMode: boolean;
+  setUseDarkMode: (useDarkMode: boolean) => void;
 }>({
-  useDarkMode: UseDarkModeState.Limbo,
+  useDarkMode: false,
   setUseDarkMode: () => {},
 });
 

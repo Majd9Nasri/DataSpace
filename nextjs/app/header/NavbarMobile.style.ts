@@ -31,6 +31,8 @@ export const NavbarMobileUnorderedList = styled.ul`
   margin: 0;
 
   list-style-type: none;
+
+  transform: translateX(100%);
 `;
 
 export const NavbarMobileLink = styled(NavbarDesktopLink)`

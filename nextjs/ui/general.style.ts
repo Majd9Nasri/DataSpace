@@ -9,10 +9,15 @@ export const ContentSection = styled.section`
   padding: 0 ${metricsRem.pagePadding};
 `;
 
-export const ResponsiveGrid = styled.div<{ columns: number }>`
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(${(p) => metrics.maxPageContentWidth / p.columns}rem, 1fr)
-  );
+export const ResponsiveFlexGrid = styled.div<{ columns: number }>`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  min-width: ${(p) => metrics.maxPageContentWidth / p.columns}rem;
+  max-width: ${(p) => metricsRem.maxPageContentWidth};
+
+  > * {
+    flex-basis: ${(p) => metrics.maxPageContentWidth / p.columns}rem;
+  }
 `;

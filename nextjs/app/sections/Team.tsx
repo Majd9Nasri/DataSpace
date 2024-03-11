@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ContentSection, ResponsiveGrid } from "../../ui/general.style";
+import { ContentSection, ResponsiveFlexGrid } from "../../ui/general.style";
 import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import { SectionTitle } from "./SectionTitle";
@@ -18,7 +18,7 @@ export function Team() {
       <h1 className="animate-slide-in-from-bottom-5rem-target-class">
         {dictionary.Team.h1}
       </h1>
-      <ResponsiveGrid columns={3}>
+      <ResponsiveFlexGrid columns={3}>
         <TeamImageWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <TeamImage src="/Ahmed.jpg" alt="Ahmed" />
           <h3>Ahmed Al-Ammari</h3>
@@ -42,7 +42,7 @@ export function Team() {
           <h3>Daniel Pantel</h3>
           <p>M.Sc. in Data Science - B.Sc. in Business Information Systems</p>
         </TeamImageWrapper>
-      </ResponsiveGrid>
+      </ResponsiveFlexGrid>
     </ContentSection>
   );
 }

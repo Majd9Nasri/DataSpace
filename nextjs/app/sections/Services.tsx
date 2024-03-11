@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ContentSection, ResponsiveGrid } from "../../ui/general.style";
+import { ContentSection, ResponsiveFlexGrid } from "../../ui/general.style";
 import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import { SectionTitle } from "./SectionTitle";
@@ -20,7 +20,7 @@ export function Services() {
       <p className="animate-slide-in-from-bottom-5rem-target-class">
         {dictionary.Services.p}
       </p>
-      <ResponsiveGrid columns={3}>
+      <ResponsiveFlexGrid columns={3}>
         <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
           <ServiceImage src="/AI KI.png" />
           <h3>{dictionary.Services["Machine Learning"].h3}</h3>
@@ -76,7 +76,7 @@ export function Services() {
           <h3>{dictionary.Services["Neural Networks"].h3}</h3>
           <p>{dictionary.Services["Neural Networks"].p}</p>
         </ServiceWrapper>
-      </ResponsiveGrid>
+      </ResponsiveFlexGrid>
     </ContentSection>
   );
 }

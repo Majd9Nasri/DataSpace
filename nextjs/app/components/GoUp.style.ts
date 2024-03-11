@@ -16,7 +16,19 @@ export const GoUpDiv = styled.div<{ text: string }>`
 
     width: 4rem;
 
-    color: rgb(0 0 0 / 85%);
+    color: rgb(
+      ${(p) => p.theme.color.textRGB} ${(p) => p.theme.color.textRGB}
+        ${(p) => p.theme.color.textRGB} / 85%
+    );
     white-space: nowrap;
+  }
+`;
+
+export const GoUpSvg = styled.svg`
+  > path {
+    fill: rgb(
+      ${(p) => p.theme.color.textRGB} ${(p) => p.theme.color.textRGB}
+        ${(p) => p.theme.color.textRGB} / 70%
+    );
   }
 `;

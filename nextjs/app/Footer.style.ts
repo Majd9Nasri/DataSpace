@@ -9,7 +9,10 @@ export const FooterFooter = styled.footer`
   padding: 0 ${metricsRem.pagePadding};
 
   font-size: 15px;
-  color: rgb(0 0 0 / 70%);
+  color: rgb(
+    ${(p) => p.theme.color.textRGB} ${(p) => p.theme.color.textRGB}
+      ${(p) => p.theme.color.textRGB} / 70%
+  );
 `;
 
 export const FooterParagraph = styled.p`

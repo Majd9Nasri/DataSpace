@@ -39,7 +39,10 @@ export const HeaderLogoImage = styled.img`
   height: 3.4375rem;
 `;
 
-export const HeaderHeader = styled.header<{ enableBackground: boolean }>`
+export const HeaderHeader = styled.header<{
+  enableBackground: boolean;
+  useDarkMode: boolean;
+}>`
   position: fixed;
   z-index: ${ZIndex.HeaderNavBar};
 
@@ -70,7 +73,8 @@ export const HeaderHeader = styled.header<{ enableBackground: boolean }>`
 
   ${NavbarMobileBurgerMenu} {
     &::before {
-      background-color: ${(p) => (p.enableBackground ? "#000" : undefined)};
+      background-color: ${(p) =>
+        p.enableBackground && !p.useDarkMode ? "#000" : undefined};
     }
   }
 `;

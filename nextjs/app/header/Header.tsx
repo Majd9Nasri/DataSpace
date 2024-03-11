@@ -60,7 +60,7 @@ export function Header() {
   }, []);
 
   return (
-    <HeaderHeader enableBackground={enableBackground}>
+    <HeaderHeader enableBackground={enableBackground} useDarkMode={useDarkMode}>
       <HeaderScrollerPercentage width={verticalScrollPercentage} />
       <HeaderNavigation>
         <HeaderLogoLink href={NavbarRouteLinks.Home}>

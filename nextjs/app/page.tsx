@@ -20,7 +20,7 @@ import { Team } from "./sections/Team";
 
 export default function Page() {
   const [useDarkMode, setUseDarkMode] = useState(UseDarkModeState.Limbo);
-  const [language, setLanguage] = useState("de");
+  const [language, setLanguage] = useState("");
   const [dictionary, setDictionary] = useState(de);
 
   useEffect(() => {
@@ -32,6 +32,8 @@ export default function Page() {
         setDictionary(en);
         break;
     }
+    if (language.length <= 0) return;
+    localStorage.setItem("language", language);
   }, [language]);
 
   useEffect(() => {
@@ -60,7 +62,8 @@ export default function Page() {
         ? UseDarkModeState.Dark
         : UseDarkModeState.White
     );
-    setLanguage(navigator.language);
+
+    setLanguage(localStorage.getItem("language") ?? navigator.language);
 
     const slideElementsCollection = document.getElementsByClassName(
       "animate-slide-in-from-bottom-5rem-target-class"

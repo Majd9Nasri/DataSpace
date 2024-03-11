@@ -47,7 +47,7 @@ export function Header() {
   }
 
   useEffect(() => {
-    polyfillCountryFlagEmojis("FlagmojiFont");
+    polyfillCountryFlagEmojis("flagmojifont");
     documentClientHeightRef.current = document.documentElement.clientHeight;
     window.addEventListener("scroll", updateVerticalScrollPercentage);
     window.addEventListener("resize", handlePageWidthChange);

@@ -3,7 +3,9 @@
 import { useContext, useState } from "react";
 import { handleNavLinkClick } from "../../lib/clientUtility";
 import { getCountryFlag, getNextLanguage } from "../../lib/serverUtility";
-import DarkModeContext from "../components/DarkModeContext";
+import DarkModeContext, {
+  UseDarkModeState,
+} from "../components/DarkModeContext";
 import LanguageContext from "../components/LanguageContext";
 import {
   NavbarMobileBurgerMenu,
@@ -87,9 +89,15 @@ export function NavbarMobile() {
             <NavbarMobileLink
               href="javascript:void(0);"
               useFlagmojiFont
-              onClick={() => setUseDarkMode(!useDarkMode)}
+              onClick={() =>
+                setUseDarkMode(
+                  useDarkMode === UseDarkModeState.White
+                    ? UseDarkModeState.Dark
+                    : UseDarkModeState.White
+                )
+              }
             >
-              {useDarkMode ? "🌙" : "💡"}
+              {useDarkMode === UseDarkModeState.Dark ? "🌙" : "💡"}
             </NavbarMobileLink>
           </li>
         </NavbarMobileUnorderedList>

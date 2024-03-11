@@ -11,5 +11,4 @@ export const ServiceWrapper = styled.div`
 export const ServiceImage = styled.img`
   width: 25%;
   margin: 0 auto;
-  object-fit: cover;
 `;

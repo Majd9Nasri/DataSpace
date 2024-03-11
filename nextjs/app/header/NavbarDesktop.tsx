@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { handleNavLinkClick } from "../../lib/clientUtility";
 import { getCountryFlag, getNextLanguage } from "../../lib/serverUtility";
-import DarkModeContext from "../components/DarkModeContext";
+import DarkModeContext, {
+  UseDarkModeState,
+} from "../components/DarkModeContext";
 import LanguageContext from "../components/LanguageContext";
 import {
   NavbarDesktopLink,
@@ -69,9 +71,15 @@ export function NavbarDesktop() {
         <NavbarDesktopLink
           href="javascript:void(0);"
           useFlagmojiFont
-          onClick={() => setUseDarkMode(!useDarkMode)}
+          onClick={() =>
+            setUseDarkMode(
+              useDarkMode === UseDarkModeState.White
+                ? UseDarkModeState.Dark
+                : UseDarkModeState.White
+            )
+          }
         >
-          {useDarkMode ? "🌙" : "💡"}
+          {useDarkMode === UseDarkModeState.Dark ? "🌙" : "💡"}
         </NavbarDesktopLink>
       </li>
     </NavbarDesktopUnorderedList>

@@ -1,7 +1,9 @@
 "use client";
 import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
 import { useContext, useEffect, useRef, useState } from "react";
-import DarkModeContext from "../components/DarkModeContext";
+import DarkModeContext, {
+  UseDarkModeState,
+} from "../components/DarkModeContext";
 import {
   HeaderHeader,
   HeaderLogoImage,
@@ -68,7 +70,7 @@ export function Header() {
             src={
               !enableBackground
                 ? "./blackLogoToUpdate.png"
-                : useDarkMode
+                : useDarkMode === UseDarkModeState.Dark
                 ? "./blackLogoToUpdate.png"
                 : "./whiteLogoToUpdate.png"
             }

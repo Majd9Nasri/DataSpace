@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, whiteTheme } from "../ui/theme";
 import { Footer } from "./Footer";
-import DarkModeContext from "./components/DarkModeContext";
+import DarkModeContext, {
+  UseDarkModeState,
+} from "./components/DarkModeContext";
 import LanguageContext from "./components/LanguageContext";
 import de from "./dictionaries/de.json";
 import en from "./dictionaries/en.json";
@@ -17,7 +19,7 @@ import { StartPage } from "./sections/StartPage";
 import { Team } from "./sections/Team";
 
 export default function Page() {
-  const [useDarkMode, setUseDarkMode] = useState(false);
+  const [useDarkMode, setUseDarkMode] = useState(UseDarkModeState.Limbo);
   const [language, setLanguage] = useState("de");
   const [dictionary, setDictionary] = useState(de);
 
@@ -33,15 +35,30 @@ export default function Page() {
   }, [language]);
 
   useEffect(() => {
-    document.body.style.backgroundColor = useDarkMode
-      ? darkTheme.color.background
-      : whiteTheme.color.background;
+    switch (useDarkMode) {
+      case UseDarkModeState.Dark:
+        document.body.style.backgroundColor = darkTheme.color.background;
+        break;
+      default:
+        document.body.style.backgroundColor = whiteTheme.color.background;
+        break;
+    }
+
+    if (useDarkMode === UseDarkModeState.Limbo) return;
+
+    localStorage.setItem("useDarkMode", `${useDarkMode}`);
   }, [useDarkMode]);
 
   useEffect(() => {
     setUseDarkMode(
-      window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
+      localStorage.getItem("useDarkMode")
+        ? localStorage.getItem("useDarkMode") == `${UseDarkModeState.Dark}`
+          ? UseDarkModeState.Dark
+          : UseDarkModeState.White
+        : window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? UseDarkModeState.Dark
+        : UseDarkModeState.White
     );
     setLanguage(navigator.language);
 
@@ -72,7 +89,9 @@ export default function Page() {
   return (
     <LanguageContext.Provider value={{ dictionary, language, setLanguage }}>
       <DarkModeContext.Provider value={{ useDarkMode, setUseDarkMode }}>
-        <ThemeProvider theme={useDarkMode ? darkTheme : whiteTheme}>
+        <ThemeProvider
+          theme={useDarkMode === UseDarkModeState.Dark ? darkTheme : whiteTheme}
+        >
           <AppWrapper>
             <Header />
             <StartPage />

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: "AI and Data Science Solutions for the Enterprise, for you.",
     images: [
       {
-        url: "https://www.dna-dataspace-solutions.com/blackLogoToUpdate.png",
+        url: "https://www.dna-dataspace-solutions.com/whiteLogoBlackBackgroundToUpdat.jpg",
         width: 853,
         height: 371,
         alt: "4NEX AI Solutions",

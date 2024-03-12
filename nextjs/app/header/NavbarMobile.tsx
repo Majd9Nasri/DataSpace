@@ -5,9 +5,9 @@ import { handleNavLinkClick } from "../../lib/clientUtility";
 import { getCountryFlag, getNextLanguage } from "../../lib/serverUtility";
 import DarkModeContext from "../components/DarkModeContext";
 import LanguageContext from "../components/LanguageContext";
+import { Twemoji } from "../components/Twemoji";
 import {
   NavbarMobileBurgerMenu,
-  NavbarMobileEmojiWrapper,
   NavbarMobileLink,
   NavbarMobileUnorderedList,
   NavbarMobileWrapper,
@@ -89,24 +89,20 @@ export function NavbarMobile() {
           </NavbarMobileLink>
         </li>
         <li>
-          <NavbarMobileEmojiWrapper>
-            <NavbarMobileLink
-              href="javascript:void(0);"
-              onClick={() => setLanguage(nextLanguage)}
-            >
-              {getCountryFlag(language)}
-            </NavbarMobileLink>
-          </NavbarMobileEmojiWrapper>
+          <NavbarMobileLink
+            href="javascript:void(0);"
+            onClick={() => setLanguage(nextLanguage)}
+          >
+            <Twemoji emoji={getCountryFlag(language)} />
+          </NavbarMobileLink>
         </li>
         <li>
-          <NavbarMobileEmojiWrapper>
-            <NavbarMobileLink
-              href="javascript:void(0);"
-              onClick={() => setUseDarkMode(!useDarkMode)}
-            >
-              {useDarkMode ? "🌙" : "💡"}
-            </NavbarMobileLink>
-          </NavbarMobileEmojiWrapper>
+          <NavbarMobileLink
+            href="javascript:void(0);"
+            onClick={() => setUseDarkMode(!useDarkMode)}
+          >
+            <Twemoji emoji={useDarkMode ? "🌙" : "💡"} />
+          </NavbarMobileLink>
         </li>
       </NavbarMobileUnorderedList>
     </NavbarMobileWrapper>

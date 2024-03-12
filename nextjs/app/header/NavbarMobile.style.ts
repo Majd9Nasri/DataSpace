@@ -14,9 +14,18 @@ export const NavbarMobileBurgerMenu = styled.span`
   padding: 1rem;
 
   &::before {
-    content: url("/burger-menu.svg");
+    content: "";
+
+    display: inline-block;
+
+    width: 1rem;
+    height: 1rem;
+
     background-color: #fff;
+
     mask: url("/burger-menu.svg") no-repeat center;
+
+    mask-size: cover;
   }
 `;
 
@@ -24,6 +33,7 @@ export const NavbarMobileUnorderedList = styled.ul`
   position: absolute;
   top: 100%;
   right: ${metricsRem.pagePadding};
+  transform: translateX(100%);
 
   display: flex;
   flex-direction: column;
@@ -31,8 +41,6 @@ export const NavbarMobileUnorderedList = styled.ul`
   margin: 0;
 
   list-style-type: none;
-
-  transform: translateX(100%);
 `;
 
 export const NavbarMobileLink = styled(NavbarDesktopLink)`

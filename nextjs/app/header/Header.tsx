@@ -40,7 +40,7 @@ export function Header() {
 
   function handlePageWidthChange() {
     setNavbarState(
-      window.matchMedia("(max-width: 45rem)").matches
+      window.matchMedia("(max-width: 46rem)").matches
         ? NavbarState.Mobile
         : NavbarState.Desktop
     );

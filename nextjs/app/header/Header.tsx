@@ -1,5 +1,4 @@
 "use client";
-import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
 import { useContext, useEffect, useRef, useState } from "react";
 import DarkModeContext from "../components/DarkModeContext";
 import {
@@ -47,7 +46,6 @@ export function Header() {
   }
 
   useEffect(() => {
-    polyfillCountryFlagEmojis("flagmojifont");
     documentClientHeightRef.current = document.documentElement.clientHeight;
     window.addEventListener("scroll", updateVerticalScrollPercentage);
     window.addEventListener("resize", handlePageWidthChange);

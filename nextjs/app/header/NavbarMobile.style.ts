@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { notoColorEmoji } from "../../ui/font";
 import { metricsRem } from "../../ui/metrics";
 import { NavbarDesktopLink } from "./NavbarDesktop.style";
 
@@ -47,4 +48,11 @@ export const NavbarMobileLink = styled(NavbarDesktopLink)`
   display: inline-block;
   width: calc(100% - 2rem);
   white-space: nowrap;
+`;
+
+export const NavbarMobileEmojiWrapper = styled(NavbarMobileLink)`
+  ${NavbarMobileLink} {
+    display: contents;
+    font-family: ${notoColorEmoji.style.fontFamily};
+  }
 `;

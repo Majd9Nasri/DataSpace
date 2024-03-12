@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { handleNavLinkClick } from "../../lib/clientUtility";
 import { getCountryFlag, getNextLanguage } from "../../lib/serverUtility";
+import { notoColorEmoji } from "../../ui/font";
 import DarkModeContext from "../components/DarkModeContext";
 import LanguageContext from "../components/LanguageContext";
 import {
+  NavbarDesktopEmojiWrapper,
   NavbarDesktopLink,
   NavbarDesktopUnorderedList,
 } from "./NavbarDesktop.style";
@@ -57,22 +59,25 @@ export function NavbarDesktop() {
         </NavbarDesktopLink>
       </li>
       <li>
-        <NavbarDesktopLink
-          href="javascript:void(0);"
-          useFlagmojiFont
-          onClick={() => setLanguage(nextLanguage)}
-        >
-          {getCountryFlag(language)}
-        </NavbarDesktopLink>
+        <NavbarDesktopEmojiWrapper>
+          <NavbarDesktopLink
+            href="javascript:void(0);"
+            onClick={() => setLanguage(nextLanguage)}
+          >
+            {getCountryFlag(language)}
+          </NavbarDesktopLink>
+        </NavbarDesktopEmojiWrapper>
       </li>
       <li>
-        <NavbarDesktopLink
-          href="javascript:void(0);"
-          useFlagmojiFont
-          onClick={() => setUseDarkMode(!useDarkMode)}
-        >
-          {useDarkMode ? "🌙" : "💡"}
-        </NavbarDesktopLink>
+        <NavbarDesktopEmojiWrapper>
+          <NavbarDesktopLink
+            href="javascript:void(0);"
+            className={notoColorEmoji.className}
+            onClick={() => setUseDarkMode(!useDarkMode)}
+          >
+            {useDarkMode ? "🌙" : "💡"}
+          </NavbarDesktopLink>
+        </NavbarDesktopEmojiWrapper>
       </li>
     </NavbarDesktopUnorderedList>
   );

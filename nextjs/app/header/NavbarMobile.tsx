@@ -7,6 +7,7 @@ import DarkModeContext from "../components/DarkModeContext";
 import LanguageContext from "../components/LanguageContext";
 import {
   NavbarMobileBurgerMenu,
+  NavbarMobileEmojiWrapper,
   NavbarMobileLink,
   NavbarMobileUnorderedList,
   NavbarMobileWrapper,
@@ -88,22 +89,24 @@ export function NavbarMobile() {
           </NavbarMobileLink>
         </li>
         <li>
-          <NavbarMobileLink
-            href="javascript:void(0);"
-            useFlagmojiFont
-            onClick={() => setLanguage(nextLanguage)}
-          >
-            {getCountryFlag(language)}
-          </NavbarMobileLink>
+          <NavbarMobileEmojiWrapper>
+            <NavbarMobileLink
+              href="javascript:void(0);"
+              onClick={() => setLanguage(nextLanguage)}
+            >
+              {getCountryFlag(language)}
+            </NavbarMobileLink>
+          </NavbarMobileEmojiWrapper>
         </li>
         <li>
-          <NavbarMobileLink
-            href="javascript:void(0);"
-            useFlagmojiFont
-            onClick={() => setUseDarkMode(!useDarkMode)}
-          >
-            {useDarkMode ? "🌙" : "💡"}
-          </NavbarMobileLink>
+          <NavbarMobileEmojiWrapper>
+            <NavbarMobileLink
+              href="javascript:void(0);"
+              onClick={() => setUseDarkMode(!useDarkMode)}
+            >
+              {useDarkMode ? "🌙" : "💡"}
+            </NavbarMobileLink>
+          </NavbarMobileEmojiWrapper>
         </li>
       </NavbarMobileUnorderedList>
     </NavbarMobileWrapper>

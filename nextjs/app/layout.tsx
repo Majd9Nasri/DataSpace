@@ -20,12 +20,12 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://www.dna-dataspace-solutions.com",
+    url: "https://www.4nex.tech",
     title: "4NEX AI Solutions",
     description: "AI and Data Science Solutions for the Enterprise, for you.",
     images: [
       {
-        url: "https://www.dna-dataspace-solutions.com/whiteLogoBlackBackgroundToUpdat.jpg",
+        url: "https://www.4nex.tech/whiteLogoBlackBackgroundToUpdat.jpg",
         width: 853,
         height: 371,
         alt: "4NEX AI Solutions",

@@ -24,8 +24,8 @@ export function Contact() {
               targetId={NavbarRouteLinks.Contact}
             />
             <h1>{dictionary.Contact.h1}</h1>
-            <ContactEmail href="mailto:contact@dna-dataspace-solutions.com">
-              contact@dna-dataspace-solutions.com
+            <ContactEmail href="mailto:contact@4next.tech">
+              contact@4next.tech
             </ContactEmail>
             <ContactNumber>+49 (0) 152 254 079 40</ContactNumber>
           </div>

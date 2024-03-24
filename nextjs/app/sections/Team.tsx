@@ -3,12 +3,15 @@ import {
   ContentSection,
   ContentSectionHeading,
   ContentSectionWrapper,
-  ResponsiveFlexGrid,
 } from "../../ui/general.style";
 import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import { SectionTitle } from "./SectionTitle";
-import { TeamImage, TeamImageWrapper } from "./Team.style";
+import {
+  TeamImage,
+  TeamImageWrapper,
+  TeamResponsiveFlexGrid,
+} from "./Team.style";
 
 export function Team() {
   const { dictionary } = useContext(LanguageContext);
@@ -24,7 +27,7 @@ export function Team() {
         <ContentSectionHeading className="animate-slide-in-from-bottom-5rem-target-class">
           {dictionary.Team.h1}
         </ContentSectionHeading>
-        <ResponsiveFlexGrid columns={3}>
+        <TeamResponsiveFlexGrid columns={3}>
           <TeamImageWrapper className="animate-slide-in-from-bottom-5rem-target-class">
             <TeamImage src="/Ahmed.jpg" alt="Ahmed" />
             <h3>Ahmed Al-Ammari</h3>
@@ -48,7 +51,7 @@ export function Team() {
             <h3>Daniel Pantel</h3>
             <p>M.Sc. in Data Science - B.Sc. in Business Information Systems</p>
           </TeamImageWrapper>
-        </ResponsiveFlexGrid>
+        </TeamResponsiveFlexGrid>
       </ContentSection>
     </ContentSectionWrapper>
   );

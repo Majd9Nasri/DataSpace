@@ -1,5 +1,10 @@
 import { useContext } from "react";
-import { ContentSection, ContentSectionWrapper } from "../../ui/general.style";
+import {
+  ContentSection,
+  ContentSectionHeading,
+  ContentSectionParagraph,
+  ContentSectionWrapper,
+} from "../../ui/general.style";
 import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import { SectionTitle } from "./SectionTitle";
@@ -13,8 +18,8 @@ export function About() {
           title={dictionary.Navbar.About}
           targetId={NavbarRouteLinks.About}
         />
-        <h1>{dictionary.About.h1}</h1>
-        <p>{dictionary.About.p}</p>
+        <ContentSectionHeading>{dictionary.About.h1}</ContentSectionHeading>
+        <ContentSectionParagraph>{dictionary.About.p}</ContentSectionParagraph>
       </ContentSection>
     </ContentSectionWrapper>
   );

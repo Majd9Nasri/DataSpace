@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import {
   ContentSection,
+  ContentSectionHeading,
   ContentSectionWrapper,
   ResponsiveFlexGrid,
 } from "../../ui/general.style";
@@ -20,9 +21,9 @@ export function Team() {
           title={dictionary.Navbar.Team}
           targetId={NavbarRouteLinks.Team}
         />
-        <h1 className="animate-slide-in-from-bottom-5rem-target-class">
+        <ContentSectionHeading className="animate-slide-in-from-bottom-5rem-target-class">
           {dictionary.Team.h1}
-        </h1>
+        </ContentSectionHeading>
         <ResponsiveFlexGrid columns={3}>
           <TeamImageWrapper className="animate-slide-in-from-bottom-5rem-target-class">
             <TeamImage src="/Ahmed.jpg" alt="Ahmed" />

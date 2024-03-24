@@ -1,5 +1,9 @@
 import { useContext } from "react";
-import { ContentSection, ContentSectionWrapper } from "../../ui/general.style";
+import {
+  ContentSection,
+  ContentSectionHeading,
+  ContentSectionWrapper,
+} from "../../ui/general.style";
 import { GoUp } from "../components/GoUp";
 import LanguageContext from "../components/LanguageContext";
 import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
@@ -23,7 +27,9 @@ export function Contact() {
               title={dictionary.Navbar.Contact}
               targetId={NavbarRouteLinks.Contact}
             />
-            <h1>{dictionary.Contact.h1}</h1>
+            <ContentSectionHeading>
+              {dictionary.Contact.h1}
+            </ContentSectionHeading>
             <ContactEmail href="mailto:contact@4next.tech">
               contact@4next.tech
             </ContactEmail>

@@ -10,7 +10,16 @@ export const ContentSectionWrapper = styled.div`
 export const ContentSection = styled.section`
   max-width: ${metricsRem.maxPageContentWidth};
   margin: 0 auto;
-  padding: 0 ${metricsRem.pagePadding};
+  padding: 0 ${metricsRem.pagePadding} 3rem ${metricsRem.pagePadding};
+`;
+
+export const ContentSectionHeading = styled.h1`
+  margin-top: 0;
+  font-size: 3rem; //ToDo set font size via Media query depending on screen size(width)
+`;
+
+export const ContentSectionParagraph = styled.p`
+  font-size: 1.5rem;
 `;
 
 export const ResponsiveFlexGrid = styled.div<{ columns: number }>`

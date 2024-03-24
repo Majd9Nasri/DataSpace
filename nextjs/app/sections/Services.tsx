@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import {
   ContentSection,
+  ContentSectionHeading,
+  ContentSectionParagraph,
   ContentSectionWrapper,
   ResponsiveFlexGrid,
 } from "../../ui/general.style";
@@ -19,12 +21,12 @@ export function Services() {
           title={dictionary.Navbar.Services}
           targetId={NavbarRouteLinks.Services}
         />
-        <h1 className="animate-slide-in-from-bottom-5rem-target-class">
+        <ContentSectionHeading className="animate-slide-in-from-bottom-5rem-target-class">
           {dictionary.Services.h1}
-        </h1>
-        <p className="animate-slide-in-from-bottom-5rem-target-class">
+        </ContentSectionHeading>
+        <ContentSectionParagraph className="animate-slide-in-from-bottom-5rem-target-class">
           {dictionary.Services.p}
-        </p>
+        </ContentSectionParagraph>
         <ResponsiveFlexGrid columns={3}>
           <ServiceWrapper className="animate-slide-in-from-bottom-5rem-target-class">
             <ServiceImage src="/AI KI.png" />

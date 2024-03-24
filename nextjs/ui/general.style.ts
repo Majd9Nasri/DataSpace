@@ -16,10 +16,17 @@ export const ContentSection = styled.section`
 export const ContentSectionHeading = styled.h1`
   margin-top: 0;
   font-size: 3rem; //ToDo set font size via Media query depending on screen size(width)
+
+  @media (max-width: ${metricsRem.mobileMaxWidth}) {
+    font-size: 2rem;
+  }
 `;
 
 export const ContentSectionParagraph = styled.p`
   font-size: 1.5rem;
+  @media (max-width: ${metricsRem.mobileMaxWidth}) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const ResponsiveFlexGrid = styled.div<{ columns: number }>`

@@ -6,5 +6,6 @@ export const metrics = {
 
 export const metricsRem = {
   maxPageContentWidth: `${metrics.maxPageContentWidth}rem`,
+  mobileMaxWidth: "46rem",
   pagePadding: `${metrics.pagePadding}rem`,
 };

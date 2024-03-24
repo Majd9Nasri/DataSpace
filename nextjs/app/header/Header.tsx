@@ -1,5 +1,6 @@
 "use client";
 import { useContext, useEffect, useRef, useState } from "react";
+import { metricsRem } from "../../ui/metrics";
 import DarkModeContext from "../components/DarkModeContext";
 import {
   HeaderHeader,
@@ -39,7 +40,7 @@ export function Header() {
 
   function handlePageWidthChange() {
     setNavbarState(
-      window.matchMedia("(max-width: 46rem)").matches
+      window.matchMedia(`(max-width: ${metricsRem.mobileMaxWidth})`).matches
         ? NavbarState.Mobile
         : NavbarState.Desktop
     );

@@ -10,10 +10,14 @@ import { NavbarRouteLinks, NavbarRoutes } from "../header/navbarRoutes";
 import {
   ContactContentSplitter,
   ContactEmail,
+  ContactFormInput,
+  ContactFormInputGrid,
+  ContactFormTextarea,
   ContactGoUpWrapper,
   ContactNumber,
 } from "./Contact.style";
 import { SectionTitle } from "./SectionTitle";
+import { SectionTitleHeadingBase } from "./SectionTitle.style";
 
 export function Contact() {
   const { dictionary } = useContext(LanguageContext);
@@ -34,6 +38,18 @@ export function Contact() {
               contact@4next.tech
             </ContactEmail>
             <ContactNumber>+49 (0) 152 254 079 40</ContactNumber>
+          </div>
+          <div style={{ width: "100%" }}>
+            <SectionTitleHeadingBase>&nbsp;</SectionTitleHeadingBase>
+            <form>
+              <ContactFormInputGrid>
+                <ContactFormInput placeholder="Name" />
+                <ContactFormInput placeholder="E-Mail" />
+                <ContactFormInput placeholder="Phone Number" />
+                <ContactFormInput placeholder="Subject" />
+              </ContactFormInputGrid>
+              <ContactFormTextarea cols={60} rows={6} placeholder="Message" />
+            </form>
           </div>
           <ContactGoUpWrapper>
             <GoUp />
